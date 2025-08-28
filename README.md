@@ -18,6 +18,19 @@ A dcat ap implementing the recommondations fo the MS MIChI.
       Python datamodel
 * [tests/](../tests/) - Python tests
 
+## Installation
+To install the requirements, run :
+```bash
+pipx install poetry
+pipx install cruft
+pipx install rust-just
+```
+
+Test your schema with:
+```bash
+make test
+```
+
 ## Developer Documentation
 
 <details>
