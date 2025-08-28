@@ -365,8 +365,8 @@
 
 
 <h1 id="slot-name">Slot: name</h1>
-<p><em>A human-readable name for a thing</em></p>
-<p>URI: <a href="http://schema.org/name">schema:name</a>
+<p><em>This slot is described in more detail within the class in which it is used.</em></p>
+<p>URI: <a href="http://xmlns.com/foaf/0.1/name">foaf:name</a>
 Alias: name</p>
 <!-- no inheritance hierarchy -->
 
@@ -381,25 +381,20 @@ Alias: name</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Person/">Person</a></td>
-<td>Represents a Person</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NamedThing/">NamedThing</a></td>
-<td>A generic grouping for any identifiable entity</td>
-<td>no</td>
+<td><a href="../Agent/">Agent</a></td>
+<td>See [DCAT-AP specs:Agent](https://semiceu</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: NONE</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/NFDI4Chem/dcat-MS-ap</li>
+<li>from schema: https://nfdi4chem.github.io/dcat-MS-ap/</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -412,11 +407,11 @@ Alias: name</p>
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:name</td>
+<td>foaf:name</td>
 </tr>
 <tr>
 <td>native</td>
-<td>dcat_ms_ap:name</td>
+<td>https://nfdi4chem.github.io/dcat-MS-ap/name</td>
 </tr>
 </tbody>
 </table>
@@ -424,14 +419,14 @@ Alias: name</p>
 <details>
 
 <pre><code class="language-yaml">name: name
-description: A human-readable name for a thing
-from_schema: https://w3id.org/NFDI4Chem/dcat-MS-ap
+description: This slot is described in more detail within the class in which it is
+  used.
+from_schema: https://nfdi4chem.github.io/dcat-MS-ap/
 rank: 1000
-slot_uri: schema:name
+slot_uri: foaf:name
 alias: name
 domain_of:
-- NamedThing
-range: string
+- Agent
 
 </code></pre>
 
