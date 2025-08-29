@@ -2,13 +2,13 @@ id: https://nfdi4chem.github.io/dcat-MS-ap/
 name: ms
 prefixes:
   linkml: https://w3id.org/linkml/
-#  dcat_4c_ap: https://stroemphi.github.io/dcat-4C-ap/
-#  dcat_ap_plus: https://stroemphi.github.io/dcat-4C-ap/
+  dcat_4c_ap: https://stroemphi.github.io/dcat-4C-ap/
+  dcat_ap_plus: https://stroemphi.github.io/dcat-4C-ap/
 
 imports:
   - linkml:types
   - dcat_ap_plus
-  - dcat_4c_ap
+  - dcat_4c_ap:dcat_4c_ap
 
 classes:
   MSAnalysisDataset:

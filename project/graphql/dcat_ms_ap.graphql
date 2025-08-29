@@ -1,30 +1,853 @@
 # metamodel_version: 1.7.0
-enum PersonStatus
+enum DatasetThemes
   {
-    ALIVE
-    DEAD
-    UNKNOWN
+    Agriculture__COMMA___fisheries__COMMA___forestry_and_food
+    Economy_and_finance
+    Education__COMMA___culture_and_sport
+    Energy
+    Environment
+    Government_and_public_sector
+    Health
+    International_issues
+    Justice__COMMA___legal_system_and_public_safety
+    Provisional_data
+    Regions_and_cities
+    Population_and_society
+    Science_and_technology
+    Transport
   }
 
-type NamedThing
+enum NMRAssayEnum
+  {
+    CHMO__COLON__0000595
+  }
+
+enum TopLevelMediaTypes
+  {
+    application
+    audio
+    example
+    font
+    haptics
+    image
+    message
+    model
+    multipart
+    text
+    video
+  }
+
+type Activity implements ClassifierMixin
   {
     id: Uriorcurie!
-    name: String
-    description: String
+    title: [String]
+    description: [String]
+    otherIdentifier: [Identifier]
+    hasPart: Activity
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
   }
 
-type Person
+type Agent
+  {
+    name: [String]!
+    type: Concept
+  }
+
+type AgenticEntity implements ClassifierMixin
   {
     id: Uriorcurie!
-    name: String
+    title: String
     description: String
-    primaryEmail: String
-    birthDate: Date
-    ageInYears: Integer
-    vitalStatus: PersonStatus
+    otherIdentifier: [Identifier]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    hasPart: [AgenticEntity]
+    type: DefinedTerm
+    rdfType: DefinedTerm
   }
 
-type PersonCollection
+type AnalysisDataset
   {
-    entries: [Person]
+    accessRights: RightsStatement
+    applicableLegislation: [LegalResource]
+    conformsTo: [Standard]
+    contactPoint: [Kind]
+    creator: [Agent]
+    datasetDistribution: [Distribution]
+    description: [String]!
+    documentation: [Document]
+    frequency: Frequency
+    geographicalCoverage: [Location]
+    hasVersion: [Dataset]
+    identifier: [String]
+    inSeries: [DatasetSeries]
+    isReferencedBy: [Resource]
+    keyword: [String]
+    landingPage: [Document]
+    language: [LinguisticSystem]
+    modificationDate: Date
+    otherIdentifier: [Identifier]
+    provenance: [ProvenanceStatement]
+    publisher: Agent
+    qualifiedAttribution: [Attribution]
+    qualifiedRelation: [Relationship]
+    relatedResource: [Resource]
+    releaseDate: Date
+    sample: [Distribution]
+    source: [Dataset]
+    spatialResolution: Decimal
+    temporalCoverage: [PeriodOfTime]
+    temporalResolution: Duration
+    theme: [Concept]
+    title: [String]!
+    type: [Concept]
+    version: String
+    versionNotes: [String]
+    id: Uriorcurie!
+    isAboutEntity: [EvaluatedEntity]
+    isAboutActivity: [EvaluatedActivity]
+    wasGeneratedBy: [DataAnalysis]
+  }
+
+type AnalysisSourceData
+  {
+    id: Uriorcurie!
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    title: String
+    description: String
+    hasPart: [EvaluatedEntity]
+    otherIdentifier: [Identifier]
+    wasGeneratedBy: [DataGeneratingActivity]
+  }
+
+type Any
+  {
+  }
+
+type Attribution
+  {
+  }
+
+type Catalogue
+  {
+    applicableLegislation: [LegalResource]
+    catalogue: [Catalogue]
+    creator: Agent
+    description: [String]!
+    geographicalCoverage: [Location]
+    hasDataset: [Dataset]
+    hasPart: [Catalogue]
+    homepage: Document
+    language: [LinguisticSystem]
+    licence: LicenseDocument
+    modificationDate: Date
+    publisher: Agent!
+    record: [CatalogueRecord]
+    releaseDate: Date
+    rights: RightsStatement
+    service: [DataService]
+    temporalCoverage: [PeriodOfTime]
+    themes: [ConceptScheme]
+    title: [String]!
+  }
+
+type CatalogueRecord
+  {
+    applicationProfile: [Standard]
+    changeType: Concept
+    description: [String]
+    language: [LinguisticSystem]
+    listingDate: Date
+    modificationDate: Date!
+    primaryTopic: Any!
+    sourceMetadata: CatalogueRecord
+    title: [String]
+  }
+
+type Checksum
+  {
+    algorithm: ChecksumAlgorithm!
+    checksumValue: HexBinary!
+  }
+
+type ChecksumAlgorithm
+  {
+  }
+
+type ChemicalEntity
+  {
+    inchi: InChi
+    inchikey: InChIKey
+    smiles: SMILES
+    iupacFormula: IUPACChemicalFormula
+  }
+
+type ChemicalReaction
+  {
+    id: Uriorcurie!
+    title: [String]
+    description: [String]
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    hasPart: [EvaluatedActivity]
+    otherIdentifier: [Identifier]
+  }
+
+type ChemicalSample
+  {
+    id: Uriorcurie!
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    wasGeneratedBy: [Activity]
+    title: String
+    description: String
+    hasPart: [EvaluatedEntity]
+    otherIdentifier: [Identifier]
+    composedOf: [ChemicalEntity]
+  }
+
+type ChemicalSubstance
+  {
+    id: Uriorcurie!
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    wasGeneratedBy: [Activity]
+    title: String
+    description: String
+    hasPart: [EvaluatedEntity]
+    otherIdentifier: [Identifier]
+    composedOf: [ChemicalEntity]
+  }
+
+interface ClassifierMixin
+  {
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type Concept
+  {
+    preferredLabel: [String]!
+  }
+
+type ConceptScheme
+  {
+    title: [String]!
+  }
+
+type DataAnalysis
+  {
+    id: Uriorcurie!
+    title: [String]
+    description: [String]
+    otherIdentifier: [Identifier]
+    hasPart: Activity
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    evaluatedActivity: [EvaluatedActivity]
+    realizedPlan: Plan
+    occurredIn: Surrounding
+    evaluatedEntity: [AnalysisSourceData]
+  }
+
+type DataGeneratingActivity
+  {
+    id: Uriorcurie!
+    title: [String]
+    description: [String]
+    otherIdentifier: [Identifier]
+    hasPart: Activity
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    evaluatedEntity: [EvaluatedEntity]
+    evaluatedActivity: [EvaluatedActivity]
+    realizedPlan: Plan
+    occurredIn: Surrounding
+  }
+
+type DataService
+  {
+    accessRights: RightsStatement
+    applicableLegislation: [LegalResource]
+    conformsTo: [Standard]
+    contactPoint: [Kind]
+    description: [String]
+    documentation: [Document]
+    endpointURL: [Resource]!
+    endpointDescription: [Resource]
+    format: [MediaTypeOrExtent]
+    keyword: [String]
+    landingPage: [Document]
+    licence: LicenseDocument
+    publisher: Agent
+    servesDataset: [Dataset]
+    theme: [Concept]
+    title: [String]!
+  }
+
+type Dataset
+  {
+    accessRights: RightsStatement
+    applicableLegislation: [LegalResource]
+    conformsTo: [Standard]
+    contactPoint: [Kind]
+    creator: [Agent]
+    datasetDistribution: [Distribution]
+    description: [String]!
+    documentation: [Document]
+    frequency: Frequency
+    geographicalCoverage: [Location]
+    hasVersion: [Dataset]
+    identifier: [String]
+    inSeries: [DatasetSeries]
+    isReferencedBy: [Resource]
+    keyword: [String]
+    landingPage: [Document]
+    language: [LinguisticSystem]
+    modificationDate: Date
+    otherIdentifier: [Identifier]
+    provenance: [ProvenanceStatement]
+    publisher: Agent
+    qualifiedAttribution: [Attribution]
+    qualifiedRelation: [Relationship]
+    relatedResource: [Resource]
+    releaseDate: Date
+    sample: [Distribution]
+    source: [Dataset]
+    spatialResolution: Decimal
+    temporalCoverage: [PeriodOfTime]
+    temporalResolution: Duration
+    theme: [Concept]
+    title: [String]!
+    type: [Concept]
+    version: String
+    versionNotes: [String]
+    wasGeneratedBy: [DataGeneratingActivity]!
+    id: Uriorcurie!
+    isAboutEntity: [EvaluatedEntity]
+    isAboutActivity: [EvaluatedActivity]
+  }
+
+type DatasetSeries
+  {
+    applicableLegislation: [LegalResource]
+    contactPoint: [Kind]
+    description: [String]!
+    frequency: Frequency
+    geographicalCoverage: [Location]
+    modificationDate: Date
+    publisher: Agent
+    releaseDate: Date
+    temporalCoverage: [PeriodOfTime]
+    title: [String]!
+  }
+
+type DefinedTerm
+  {
+    id: Uriorcurie!
+    title: String
+    fromCV: Uriorcurie
+  }
+
+type Device
+  {
+    id: Uriorcurie!
+    title: String
+    description: String
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    hasPart: [Device]
+    otherIdentifier: [Identifier]
+  }
+
+type Distribution
+  {
+    accessURL: [Resource]!
+    accessService: [DataService]
+    applicableLegislation: [LegalResource]
+    availability: Concept
+    byteSize: NonNegativeInteger
+    checksum: Checksum
+    compressionFormat: MediaType
+    description: [String]
+    documentation: [Document]
+    downloadURL: [Resource]
+    format: MediaTypeOrExtent
+    hasPolicy: Policy
+    language: [LinguisticSystem]
+    licence: LicenseDocument
+    linkedSchemas: [Standard]
+    mediaType: MediaType
+    modificationDate: Date
+    packagingFormat: MediaType
+    releaseDate: Date
+    rights: RightsStatement
+    spatialResolution: Decimal
+    status: Concept
+    temporalResolution: Duration
+    title: [String]
+  }
+
+type Document
+  {
+  }
+
+type Entity implements ClassifierMixin
+  {
+    title: String
+    description: String
+    id: Uriorcurie!
+    otherIdentifier: [Identifier]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    hasPart: [Entity]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type EvaluatedActivity
+  {
+    id: Uriorcurie!
+    title: [String]
+    description: [String]
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    hasPart: String
+    otherIdentifier: [Identifier]
+  }
+
+type EvaluatedEntity
+  {
+    id: Uriorcurie!
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    wasGeneratedBy: [Activity]
+    title: String
+    description: String
+    hasPart: [EvaluatedEntity]
+    otherIdentifier: [Identifier]
+  }
+
+type Frequency
+  {
+  }
+
+type Geometry
+  {
+  }
+
+type Identifier
+  {
+    notation: String!
+  }
+
+type InChi
+  {
+    title: String
+    description: String
+    value: String!
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type InChIKey
+  {
+    title: String
+    description: String
+    value: String!
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type IUPACChemicalFormula
+  {
+    title: String
+    description: String
+    value: String!
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type Kind
+  {
+  }
+
+type Laboratory
+  {
+    title: String
+    description: String
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type LegalResource
+  {
+  }
+
+type LicenseDocument
+  {
+    type: [Concept]
+  }
+
+type LinguisticSystem
+  {
+  }
+
+type Location
+  {
+    bbox: String
+    centroid: String
+    geometry: Geometry
+  }
+
+type MediaType
+  {
+  }
+
+type MediaTypeOrExtent
+  {
+  }
+
+type MSAnalysis
+  {
+    id: Uriorcurie!
+    title: [String]
+    description: [String]
+    otherIdentifier: [Identifier]
+    hasPart: Activity
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    evaluatedActivity: [EvaluatedActivity]
+    realizedPlan: Plan
+    occurredIn: Surrounding
+    evaluatedEntity: [MSSpectrum]
+  }
+
+type MSAnalysisDataset
+  {
+    accessRights: RightsStatement
+    applicableLegislation: [LegalResource]
+    conformsTo: [Standard]
+    contactPoint: [Kind]
+    creator: [Agent]
+    datasetDistribution: [Distribution]
+    description: [String]!
+    documentation: [Document]
+    frequency: Frequency
+    geographicalCoverage: [Location]
+    hasVersion: [Dataset]
+    identifier: [String]
+    inSeries: [DatasetSeries]
+    isReferencedBy: [Resource]
+    keyword: [String]
+    landingPage: [Document]
+    language: [LinguisticSystem]
+    modificationDate: Date
+    otherIdentifier: [Identifier]
+    provenance: [ProvenanceStatement]
+    publisher: Agent
+    qualifiedAttribution: [Attribution]
+    qualifiedRelation: [Relationship]
+    relatedResource: [Resource]
+    releaseDate: Date
+    sample: [Distribution]
+    source: [Dataset]
+    spatialResolution: Decimal
+    temporalCoverage: [PeriodOfTime]
+    temporalResolution: Duration
+    theme: [Concept]
+    title: [String]!
+    type: [Concept]
+    version: String
+    versionNotes: [String]
+    id: Uriorcurie!
+    isAboutActivity: [EvaluatedActivity]
+    wasGeneratedBy: [MSAnalysis]
+    isAboutEntity: [ChemicalSample]
+  }
+
+type MSSpectroscopy
+  {
+    id: Uriorcurie!
+    title: [String]
+    description: [String]
+    otherIdentifier: [Identifier]
+    hasPart: Activity
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    evaluatedActivity: [EvaluatedActivity]
+    realizedPlan: Plan
+    occurredIn: Surrounding
+    evaluatedEntity: [ChemicalSample]
+    rdfType: DefinedTerm
+  }
+
+type MSSpectrum
+  {
+    id: Uriorcurie!
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    title: String
+    description: String
+    hasPart: [EvaluatedEntity]
+    otherIdentifier: [Identifier]
+    wasGeneratedBy: [MSSpectroscopy]
+  }
+
+type NMRAnalysisDataset
+  {
+    accessRights: RightsStatement
+    applicableLegislation: [LegalResource]
+    conformsTo: [Standard]
+    contactPoint: [Kind]
+    creator: [Agent]
+    datasetDistribution: [Distribution]
+    description: [String]!
+    documentation: [Document]
+    frequency: Frequency
+    geographicalCoverage: [Location]
+    hasVersion: [Dataset]
+    identifier: [String]
+    inSeries: [DatasetSeries]
+    isReferencedBy: [Resource]
+    keyword: [String]
+    landingPage: [Document]
+    language: [LinguisticSystem]
+    modificationDate: Date
+    otherIdentifier: [Identifier]
+    provenance: [ProvenanceStatement]
+    publisher: Agent
+    qualifiedAttribution: [Attribution]
+    qualifiedRelation: [Relationship]
+    relatedResource: [Resource]
+    releaseDate: Date
+    sample: [Distribution]
+    source: [Dataset]
+    spatialResolution: Decimal
+    temporalCoverage: [PeriodOfTime]
+    temporalResolution: Duration
+    theme: [Concept]
+    title: [String]!
+    type: [Concept]
+    version: String
+    versionNotes: [String]
+    id: Uriorcurie!
+    isAboutActivity: [EvaluatedActivity]
+    wasGeneratedBy: [NMRSpectralAnalysis]
+    isAboutEntity: [ChemicalSample]
+  }
+
+type NMRSpectralAnalysis
+  {
+    id: Uriorcurie!
+    title: [String]
+    description: [String]
+    otherIdentifier: [Identifier]
+    hasPart: Activity
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    evaluatedActivity: [EvaluatedActivity]
+    realizedPlan: Plan
+    occurredIn: Surrounding
+    evaluatedEntity: [NMRSpectrum]
+  }
+
+type NMRSpectroscopy
+  {
+    id: Uriorcurie!
+    title: [String]
+    description: [String]
+    otherIdentifier: [Identifier]
+    hasPart: Activity
+    hadInputEntity: [Entity]
+    hadOutputEntity: [Entity]
+    hadInputActivity: [Activity]
+    carriedOutBy: [AgenticEntity]
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    evaluatedActivity: [EvaluatedActivity]
+    realizedPlan: Plan
+    occurredIn: Surrounding
+    evaluatedEntity: [ChemicalSample]
+    rdfType: DefinedTerm
+  }
+
+type NMRSpectrum
+  {
+    id: Uriorcurie!
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    title: String
+    description: String
+    hasPart: [EvaluatedEntity]
+    otherIdentifier: [Identifier]
+    wasGeneratedBy: [NMRSpectroscopy]
+  }
+
+type PeriodOfTime
+  {
+    beginning: TimeInstant
+    end: TimeInstant
+    endDate: Date
+    startDate: Date
+  }
+
+type Plan implements ClassifierMixin
+  {
+    title: String
+    description: String
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type Policy
+  {
+  }
+
+type ProvenanceStatement
+  {
+  }
+
+type QualitativeAttribute implements ClassifierMixin
+  {
+    title: String
+    description: String
+    value: String!
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type QuantitativeAttribute implements ClassifierMixin
+  {
+    title: String
+    description: String
+    value: Float!
+    hasQuantityType: DefinedTerm!
+    unit: DefinedTerm
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type Relationship
+  {
+    hadRole: [Role]!
+    relation: [Resource]!
+  }
+
+type Resource
+  {
+  }
+
+type RightsStatement
+  {
+  }
+
+type Role
+  {
+  }
+
+type SMILES
+  {
+    title: String
+    description: String
+    value: String!
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type Software
+  {
+    id: Uriorcurie!
+    title: String
+    description: String
+    hasQualitativeAttribute: [QualitativeAttribute]
+    hasQuantitativeAttribute: [QuantitativeAttribute]
+    type: DefinedTerm
+    rdfType: DefinedTerm
+    hasPart: [Software]
+    otherIdentifier: [Identifier]
+  }
+
+type Standard
+  {
+  }
+
+type SupportiveEntity
+  {
+  }
+
+type Surrounding implements ClassifierMixin
+  {
+    title: String
+    description: String
+    type: DefinedTerm
+    rdfType: DefinedTerm
+  }
+
+type TimeInstant
+  {
   }

@@ -1,11 +1,239 @@
 {
-   "PATO": "http://purl.obolibrary.org/obo/PATO_",
-   "biolink": "https://w3id.org/biolink/",
-   "dcat_ms_ap": "https://w3id.org/NFDI4Chem/dcat-MS-ap/",
-   "example": "https://example.org/",
+   "BFO": "http://purl.obolibrary.org/obo/BFO_",
+   "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_",
+   "CHEMINF": "http://semanticscience.org/resource/CHEMINF_",
+   "CHMO": "http://purl.obolibrary.org/obo/CHMO_",
+   "IAO": "http://purl.obolibrary.org/obo/IAO_",
+   "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
+   "NMR": "http://nmrML.org/nmrCV#NMR:",
+   "OBI": "http://purl.obolibrary.org/obo/OBI_",
+   "RXNO": "http://purl.obolibrary.org/obo/RXNO_",
+   "SIO": "http://semanticscience.org/resource/SIO_",
+   "adms": "http://www.w3.org/ns/adms#",
+   "dcat": "http://www.w3.org/ns/dcat#",
+   "dcat_4c_ap": "https://stroemphi.github.io/dcat-4C-ap/",
+   "dcat_ap_plus": "https://stroemphi.github.io/dcat-4C-ap/",
+   "dcatap": "http://data.europa.eu/r5r/",
+   "dcatap_plus": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#",
+   "dcterms": "http://purl.org/dc/terms/",
+   "eli": "http://data.europa.eu/eli/ontology#",
+   "epos": "https://www.epos-eu.org/epos-dcat-ap#",
+   "foaf": "http://xmlns.com/foaf/0.1/",
    "linkml": "https://w3id.org/linkml/",
+   "locn": "http://www.w3.org/ns/locn#",
+   "nfdi4c": "https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/",
+   "odrl": "http://www.w3.org/ns/odrl/2/",
+   "prov": "http://www.w3.org/ns/prov#",
+   "qudt": "http://qudt.org/schema/qudt/",
+   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "schema": "http://schema.org/",
-   "NamedThing": {
-      "@id": "schema:Thing"
+   "skos": "http://www.w3.org/2004/02/skos/core#",
+   "spdx": "http://spdx.org/rdf/terms#",
+   "time": "http://www.w3.org/2006/time#",
+   "vcard": "http://www.w3.org/2006/vcard/ns#",
+   "Activity": {
+      "@id": "prov:Activity"
+   },
+   "Agent": {
+      "@id": "foaf:Agent"
+   },
+   "AgenticEntity": {
+      "@id": "prov:Agent"
+   },
+   "AnalysisDataset": {
+      "@id": "dcat:Dataset"
+   },
+   "AnalysisSourceData": {
+      "@id": "prov:Entity"
+   },
+   "Any": {
+      "@id": "linkml:Any"
+   },
+   "Attribution": {
+      "@id": "prov:Attribution"
+   },
+   "Catalogue": {
+      "@id": "dcat:Catalog"
+   },
+   "CatalogueRecord": {
+      "@id": "dcat:CatalogRecord"
+   },
+   "Checksum": {
+      "@id": "spdx:Checksum"
+   },
+   "ChecksumAlgorithm": {
+      "@id": "spdx:ChecksumAlgorithm"
+   },
+   "ChemicalEntity": {
+      "@id": "CHEBI:23367"
+   },
+   "ChemicalReaction": {
+      "@id": "RXNO:0000329"
+   },
+   "ChemicalSample": {
+      "@id": "nfdi4c:ChemicalSample"
+   },
+   "ChemicalSubstance": {
+      "@id": "prov:Entity"
+   },
+   "ClassifierMixin": {
+      "@id": "dcatap_plus:ClassifierMixin"
+   },
+   "Concept": {
+      "@id": "skos:Concept"
+   },
+   "ConceptScheme": {
+      "@id": "skos:ConceptScheme"
+   },
+   "DataAnalysis": {
+      "@id": "prov:Activity"
+   },
+   "DataGeneratingActivity": {
+      "@id": "prov:Activity"
+   },
+   "DataService": {
+      "@id": "dcat:DataService"
+   },
+   "Dataset": {
+      "@id": "dcat:Dataset"
+   },
+   "DatasetSeries": {
+      "@id": "dcat:DatasetSeries"
+   },
+   "DefinedTerm": {
+      "@id": "schema:DefinedTerm"
+   },
+   "Device": {
+      "@id": "prov:Agent"
+   },
+   "Distribution": {
+      "@id": "dcat:Distribution"
+   },
+   "Document": {
+      "@id": "foaf:Document"
+   },
+   "Entity": {
+      "@id": "prov:Entity"
+   },
+   "EvaluatedActivity": {
+      "@id": "prov:Activity"
+   },
+   "EvaluatedEntity": {
+      "@id": "prov:Entity"
+   },
+   "Frequency": {
+      "@id": "dcterms:Frequency"
+   },
+   "Geometry": {
+      "@id": "locn:Geometry"
+   },
+   "Identifier": {
+      "@id": "adms:Identifier"
+   },
+   "InChi": {
+      "@id": "CHEMINF:000113"
+   },
+   "InChIKey": {
+      "@id": "CHEMINF:000059"
+   },
+   "IUPACChemicalFormula": {
+      "@id": "CHEMINF:000037"
+   },
+   "Kind": {
+      "@id": "vcard:Kind"
+   },
+   "Laboratory": {
+      "@id": "prov:Location"
+   },
+   "LegalResource": {
+      "@id": "eli:LegalResource"
+   },
+   "LicenseDocument": {
+      "@id": "dcterms:LicenseDocument"
+   },
+   "LinguisticSystem": {
+      "@id": "dcterms:LinguisticSystem"
+   },
+   "Location": {
+      "@id": "dcterms:Location"
+   },
+   "MediaType": {
+      "@id": "dcterms:MediaType"
+   },
+   "MediaTypeOrExtent": {
+      "@id": "dcterms:MediaTypeOrExtent"
+   },
+   "MSAnalysis": {
+      "@id": "CHMO:0000470"
+   },
+   "MSAnalysisDataset": {
+      "@id": "dcat:Dataset"
+   },
+   "MSSpectroscopy": {
+      "@id": "https://nfdi4chem.github.io/dcat-MS-ap/MSSpectroscopy"
+   },
+   "MSSpectrum": {
+      "@id": "NMR:1002007"
+   },
+   "NMRAnalysisDataset": {
+      "@id": "dcat:Dataset"
+   },
+   "NMRSpectralAnalysis": {
+      "@id": "NMR:1000259"
+   },
+   "NMRSpectroscopy": {
+      "@id": "nfdi4c:NMRSpectroscopy"
+   },
+   "NMRSpectrum": {
+      "@id": "NMR:1002007"
+   },
+   "PeriodOfTime": {
+      "@id": "dcterms:PeriodOfTime"
+   },
+   "Plan": {
+      "@id": "prov:Plan"
+   },
+   "Policy": {
+      "@id": "odrl:Policy"
+   },
+   "ProvenanceStatement": {
+      "@id": "dcterms:ProvenanceStatement"
+   },
+   "QualitativeAttribute": {
+      "@id": "prov:Entity"
+   },
+   "QuantitativeAttribute": {
+      "@id": "qudt:Quantity"
+   },
+   "Relationship": {
+      "@id": "dcat:Relationship"
+   },
+   "Resource": {
+      "@id": "rdfs:Resource"
+   },
+   "RightsStatement": {
+      "@id": "dcterms:RightsStatement"
+   },
+   "Role": {
+      "@id": "dcat:Role"
+   },
+   "SMILES": {
+      "@id": "CHEMINF:000018"
+   },
+   "Software": {
+      "@id": "prov:SoftwareAgent"
+   },
+   "Standard": {
+      "@id": "dcterms:Standard"
+   },
+   "SupportiveEntity": {
+      "@id": "dcatap_plus:SupportiveEntity"
+   },
+   "Surrounding": {
+      "@id": "prov:Location"
+   },
+   "TimeInstant": {
+      "@id": "time:Instant"
    }
 }
