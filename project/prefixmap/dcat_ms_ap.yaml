@@ -11,8 +11,6 @@
    "SIO": "http://semanticscience.org/resource/SIO_",
    "adms": "http://www.w3.org/ns/adms#",
    "dcat": "http://www.w3.org/ns/dcat#",
-   "dcat_4c_ap": "https://stroemphi.github.io/dcat-4C-ap/",
-   "dcat_ap_plus": "https://stroemphi.github.io/dcat-4C-ap/",
    "dcatap": "http://data.europa.eu/r5r/",
    "dcatap_plus": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#",
    "dcterms": "http://purl.org/dc/terms/",

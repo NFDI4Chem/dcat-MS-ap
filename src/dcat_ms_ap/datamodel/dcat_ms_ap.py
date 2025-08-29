@@ -1,5 +1,5 @@
 # Auto generated from dcat_ms_ap.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-08-29T11:16:26
+# Generation date: 2025-08-29T11:49:53
 # Schema: ms
 #
 # id: https://nfdi4chem.github.io/dcat-MS-ap/
@@ -75,8 +75,6 @@ RXNO = CurieNamespace('RXNO', 'http://purl.obolibrary.org/obo/RXNO_')
 SIO = CurieNamespace('SIO', 'http://semanticscience.org/resource/SIO_')
 ADMS = CurieNamespace('adms', 'http://www.w3.org/ns/adms#')
 DCAT = CurieNamespace('dcat', 'http://www.w3.org/ns/dcat#')
-DCAT_4C_AP = CurieNamespace('dcat_4c_ap', 'https://stroemphi.github.io/dcat-4C-ap/')
-DCAT_AP_PLUS = CurieNamespace('dcat_ap_plus', 'https://stroemphi.github.io/dcat-4C-ap/')
 DCATAP = CurieNamespace('dcatap', 'http://data.europa.eu/r5r/')
 DCATAP_PLUS = CurieNamespace('dcatap_plus', 'https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#')
 DCTERMS = CurieNamespace('dcterms', 'http://purl.org/dc/terms/')

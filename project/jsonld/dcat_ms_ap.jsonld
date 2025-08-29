@@ -4,21 +4,13 @@
   "imports": [
     "linkml:types",
     "dcat_ap_plus",
-    "dcat_4c_ap:dcat_4c_ap"
+    "dcat_4c_ap"
   ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "prefixes": [
     {
       "prefix_prefix": "linkml",
       "prefix_reference": "https://w3id.org/linkml/"
-    },
-    {
-      "prefix_prefix": "dcat_4c_ap",
-      "prefix_reference": "https://stroemphi.github.io/dcat-4C-ap/"
-    },
-    {
-      "prefix_prefix": "dcat_ap_plus",
-      "prefix_reference": "https://stroemphi.github.io/dcat-4C-ap/"
     }
   ],
   "default_prefix": "https://nfdi4chem.github.io/dcat-MS-ap/",
@@ -8431,15 +8423,15 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "dcat_ms_ap.yaml",
-  "source_file_date": "2025-08-29T11:13:45",
-  "source_file_size": 5021,
-  "generation_date": "2025-08-29T11:16:24",
+  "source_file_date": "2025-08-29T11:45:45",
+  "source_file_size": 5012,
+  "generation_date": "2025-08-29T11:49:51",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/dcat_ms_ap.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     "dcat_ap_plus.context.jsonld",
-    "https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap.context.jsonld",
+    "dcat_4c_ap.context.jsonld",
     {
       "@base": "https://nfdi4chem.github.io/dcat-MS-ap/"
     }
