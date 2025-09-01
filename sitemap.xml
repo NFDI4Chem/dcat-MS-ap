@@ -1,811 +1,811 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Activity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Activity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Agent/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Agent/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/AgenticEntity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/AgenticEntity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/AnalysisDataset/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/AnalysisDataset/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/AnalysisSourceData/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/AnalysisSourceData/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Any/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Any/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Attribution/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Attribution/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Boolean/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Boolean/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Catalogue/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Catalogue/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/CatalogueRecord/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/CatalogueRecord/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Checksum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Checksum/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ChecksumAlgorithm/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ChecksumAlgorithm/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ChemicalEntity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ChemicalEntity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ChemicalReaction/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ChemicalReaction/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ChemicalSample/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ChemicalSample/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ChemicalSubstance/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ChemicalSubstance/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ClassifierMixin/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ClassifierMixin/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Concept/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Concept/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ConceptScheme/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ConceptScheme/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Curie/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Curie/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/DataAnalysis/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/DataAnalysis/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/DataGeneratingActivity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/DataGeneratingActivity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/DataService/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/DataService/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Dataset/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Dataset/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/DatasetSeries/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/DatasetSeries/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/DatasetThemes/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/DatasetThemes/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Date/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Date/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/DateOrDatetime/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/DateOrDatetime/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Datetime/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Datetime/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Decimal/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Decimal/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/DefinedTerm/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/DefinedTerm/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Device/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Device/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Distribution/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Distribution/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Document/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Document/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/DomainAgnosticCore/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/DomainAgnosticCore/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Double/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Double/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Duration/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Duration/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Entity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Entity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/EvaluatedActivity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/EvaluatedActivity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/EvaluatedEntity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/EvaluatedEntity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Float/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Float/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Frequency/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Frequency/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Geometry/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Geometry/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/HexBinary/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/HexBinary/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/IUPACChemicalFormula/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/IUPACChemicalFormula/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Identifier/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Identifier/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/InChIKey/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/InChIKey/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/InChi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/InChi/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Integer/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Integer/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Jsonpath/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Jsonpath/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Jsonpointer/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Jsonpointer/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Kind/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Kind/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Laboratory/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Laboratory/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/LegalResource/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/LegalResource/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/LicenseDocument/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/LicenseDocument/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/LinguisticSystem/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/LinguisticSystem/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Location/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Location/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/MSAnalysis/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/MSAnalysis/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/MSAnalysisDataset/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/MSAnalysisDataset/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/MSSpectroscopy/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/MSSpectroscopy/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/MSSpectrum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/MSSpectrum/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/MediaType/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/MediaType/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/MediaTypeOrExtent/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/MediaTypeOrExtent/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/NMRAnalysisDataset/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/NMRAnalysisDataset/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/NMRAssayEnum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/NMRAssayEnum/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/NMRSpectralAnalysis/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/NMRSpectralAnalysis/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/NMRSpectroscopy/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/NMRSpectroscopy/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/NMRSpectrum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/NMRSpectrum/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Ncname/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Ncname/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Nodeidentifier/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Nodeidentifier/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/NonNegativeInteger/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/NonNegativeInteger/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Objectidentifier/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Objectidentifier/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/PeriodOfTime/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/PeriodOfTime/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Plan/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Plan/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Policy/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Policy/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ProvenanceStatement/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ProvenanceStatement/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/QUDTQuantityKindEnum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/QUDTQuantityKindEnum/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/QUDTUnitEnum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/QUDTUnitEnum/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/QualitativeAttribute/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/QualitativeAttribute/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/QuantitativeAttribute/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/QuantitativeAttribute/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Relationship/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Relationship/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Resource/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Resource/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/RightsStatement/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/RightsStatement/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Role/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Role/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/SMILES/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/SMILES/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Software/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Software/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Sparqlpath/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Sparqlpath/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Standard/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Standard/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/String/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/String/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/SupportiveEntity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/SupportiveEntity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Surrounding/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Surrounding/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Time/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Time/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/TimeInstant/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/TimeInstant/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/TopLevelMediaTypes/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/TopLevelMediaTypes/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Uri/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Uri/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/Uriorcurie/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/Uriorcurie/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/about/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/about/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/access_URL/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/access_URL/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/access_rights/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/access_rights/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/access_service/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/access_service/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/algorithm/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/algorithm/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/applicable_legislation/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/applicable_legislation/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/application_profile/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/application_profile/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/availability/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/availability/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/bbox/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/bbox/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/beginning/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/beginning/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/byte_size/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/byte_size/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/carried_out_by/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/carried_out_by/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/catalogue/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/catalogue/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/centroid/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/centroid/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/change_type/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/change_type/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/checksum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/checksum/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/checksum_value/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/checksum_value/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/composed_of/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/composed_of/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/compression_format/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/compression_format/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/conforms_to/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/conforms_to/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/contact_point/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/contact_point/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/creator/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/creator/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/dataset_distribution/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/dataset_distribution/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/description/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/description/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/documentation/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/documentation/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/download_URL/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/download_URL/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/end/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/end/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/end_date/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/end_date/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/endpoint_URL/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/endpoint_URL/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/endpoint_description/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/endpoint_description/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/evaluated_activity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/evaluated_activity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/evaluated_entity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/evaluated_entity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/format/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/format/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/frequency/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/frequency/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/from_CV/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/from_CV/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/geographical_coverage/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/geographical_coverage/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/geometry/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/geometry/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/had_input_activity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/had_input_activity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/had_input_entity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/had_input_entity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/had_output_entity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/had_output_entity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/had_role/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/had_role/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/has_dataset/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/has_dataset/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/has_part/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/has_part/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/has_policy/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/has_policy/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/has_qualitative_attribute/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/has_qualitative_attribute/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/has_quantitative_attribute/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/has_quantitative_attribute/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/has_quantity_type/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/has_quantity_type/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/has_version/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/has_version/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/homepage/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/homepage/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/id/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/id/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/identifier/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/identifier/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/in_series/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/in_series/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/inchi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/inchi/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/inchikey/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/inchikey/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/is_about_activity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/is_about_activity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/is_about_entity/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/is_about_entity/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/is_referenced_by/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/is_referenced_by/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/iupac_formula/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/iupac_formula/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/keyword/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/keyword/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/landing_page/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/landing_page/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/language/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/language/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/licence/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/licence/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/linked_schemas/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/linked_schemas/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/listing_date/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/listing_date/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/media_type/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/media_type/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/modification_date/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/modification_date/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/ms/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/ms/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/name/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/name/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/notation/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/notation/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/occurred_in/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/occurred_in/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/other_identifier/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/other_identifier/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/packaging_format/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/packaging_format/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/preferred_label/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/preferred_label/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/primary_topic/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/primary_topic/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/provenance/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/provenance/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/publisher/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/publisher/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/qualified_attribution/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/qualified_attribution/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/qualified_relation/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/qualified_relation/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/rdf_type/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/rdf_type/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/realized_plan/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/realized_plan/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/record/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/record/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/related_resource/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/related_resource/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/relation/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/relation/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/release_date/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/release_date/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/rights/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/rights/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/sample/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/sample/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/serves_dataset/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/serves_dataset/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/service/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/service/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/smiles/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/smiles/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/source/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/source/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/source_metadata/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/source_metadata/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/spatial_resolution/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/spatial_resolution/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/start_date/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/start_date/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/status/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/status/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/temporal_coverage/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/temporal_coverage/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/temporal_resolution/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/temporal_resolution/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/theme/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/theme/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/themes/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/themes/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/title/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/title/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/type/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/type/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/unit/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/unit/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/value/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/value/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/version/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/version/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/version_notes/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/version_notes/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
     <url>
-         <loc>https://NFDI4Chem.github.io/dcat-MS-ap/was_generated_by/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <loc>https://NFDI4Chem.github.io/dcat-ms-ap/was_generated_by/</loc>
+         <lastmod>2025-09-01</lastmod>
     </url>
 </urlset>
