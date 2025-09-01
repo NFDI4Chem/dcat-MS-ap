@@ -1,35 +1,34 @@
-# dcat-MS-ap
+# dcat-ms-ap
 
 A dcat ap implementing the recommondations fo the MS MIChI.
 
 ## Website
 
-[https://NFDI4Chem.github.io/dcat-MS-ap](https://NFDI4Chem.github.io/dcat-MS-ap)
+[https://NFDI4Chem.github.io/dcat-ms-ap](https://NFDI4Chem.github.io/dcat-ms-ap)
 
 ## Repository Structure
 
-* [examples/](../examples/) - example data
-* [project/](../project/) - project files (do not edit these)
-* [src/](../src/) - source files (edit these)
+* [examples/](examples/) - example data
+* [project/](project/) - project files (do not edit these)
+* [src/](src/) - source files (edit these)
   * [dcat_ms_ap](src/dcat_ms_ap)
     * [schema](src/dcat_ms_ap/schema) -- LinkML schema
       (edit this)
     * [datamodel](src/dcat_ms_ap/datamodel) -- generated
       Python datamodel
-* [tests/](../tests/) - Python tests
+* [tests/](tests/) - Python tests
 
 ## Installation
-To install the requirements, run :
+
 ```bash
-pipx install poetry
-pipx install cruft
-pipx install rust-just
+uv venv
+source .venv/bin/activate
+uv pip install rust-just
+uv pip install poetry
+
 ```
 
-Test your schema with:
-```bash
-make test
-```
+
 
 ## Developer Documentation
 

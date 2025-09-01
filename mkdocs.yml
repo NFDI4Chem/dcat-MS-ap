@@ -1,5 +1,5 @@
 ---
-site_name: "dcat-MS-ap"
+site_name: "dcat-ms-ap"
 theme:
   name: material
   # palette:
@@ -18,8 +18,8 @@ nav:
   # - Home: home.md
   - Index: index.md
   - About: about.md
-site_url: https://NFDI4Chem.github.io/dcat-MS-ap
-repo_url: https://github.com/NFDI4Chem/dcat-MS-ap
+site_url: https://NFDI4Chem.github.io/dcat-ms-ap
+repo_url: https://github.com/NFDI4Chem/dcat-ms-ap
 markdown_extensions:
   - tables
 extra_javascript:

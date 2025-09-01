@@ -4,7 +4,7 @@
   "checkout": null,
   "context": {
     "cookiecutter": {
-      "project_name": "dcat-MS-ap",
+      "project_name": "dcat-ms-ap",
       "__project_slug": "dcat_ms_ap",
       "github_org": "NFDI4Chem",
       "__source_path": "src/dcat_ms_ap/schema/dcat_ms_ap.yaml",
@@ -13,7 +13,7 @@
       "email": "rmeier@ipb-halle.de",
       "__author": "René Meier <rmeier@ipb-halle.de>",
       "license": "MIT",
-      "main_schema_class": "Person",
+      "main_schema_class": "Dataset",
       "create_python_classes": "Yes",
       "use_schemasheets": "No",
       "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
