@@ -169,7 +169,7 @@
       "@id": "dcat:Dataset"
    },
    "MSSpectroscopy": {
-      "@id": "https://nfdi4chem.github.io/dcat-MS-ap/MSSpectroscopy"
+      "@id": "https://nfdi4chem.github.io/dcat-ms-ap/MSSpectroscopy"
    },
    "MSSpectrum": {
       "@id": "NMR:1002007"

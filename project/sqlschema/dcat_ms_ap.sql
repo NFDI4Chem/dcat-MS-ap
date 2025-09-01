@@ -1426,7 +1426,7 @@ CREATE TABLE "MSAnalysisDataset_identifier" (
 	identifier TEXT,
 	PRIMARY KEY ("MSAnalysisDataset_id", identifier),
 	FOREIGN KEY("MSAnalysisDataset_id") REFERENCES "MSAnalysisDataset" (id)
-);CREATE INDEX "ix_MSAnalysisDataset_identifier_identifier" ON "MSAnalysisDataset_identifier" (identifier);CREATE INDEX "ix_MSAnalysisDataset_identifier_MSAnalysisDataset_id" ON "MSAnalysisDataset_identifier" ("MSAnalysisDataset_id");
+);CREATE INDEX "ix_MSAnalysisDataset_identifier_MSAnalysisDataset_id" ON "MSAnalysisDataset_identifier" ("MSAnalysisDataset_id");CREATE INDEX "ix_MSAnalysisDataset_identifier_identifier" ON "MSAnalysisDataset_identifier" (identifier);
 CREATE TABLE "MSAnalysisDataset_keyword" (
 	"MSAnalysisDataset_id" TEXT,
 	keyword TEXT,
@@ -1456,7 +1456,7 @@ CREATE TABLE "MSAnalysis_description" (
 	description TEXT,
 	PRIMARY KEY ("MSAnalysis_id", description),
 	FOREIGN KEY("MSAnalysis_id") REFERENCES "MSAnalysis" (id)
-);CREATE INDEX "ix_MSAnalysis_description_MSAnalysis_id" ON "MSAnalysis_description" ("MSAnalysis_id");CREATE INDEX "ix_MSAnalysis_description_description" ON "MSAnalysis_description" (description);
+);CREATE INDEX "ix_MSAnalysis_description_description" ON "MSAnalysis_description" (description);CREATE INDEX "ix_MSAnalysis_description_MSAnalysis_id" ON "MSAnalysis_description" ("MSAnalysis_id");
 CREATE TABLE "MSSpectroscopy_title" (
 	"MSSpectroscopy_id" TEXT,
 	title TEXT,
@@ -1492,19 +1492,19 @@ CREATE TABLE "AnalysisDataset_description" (
 	description TEXT NOT NULL,
 	PRIMARY KEY ("AnalysisDataset_id", description),
 	FOREIGN KEY("AnalysisDataset_id") REFERENCES "AnalysisDataset" (id)
-);CREATE INDEX "ix_AnalysisDataset_description_AnalysisDataset_id" ON "AnalysisDataset_description" ("AnalysisDataset_id");CREATE INDEX "ix_AnalysisDataset_description_description" ON "AnalysisDataset_description" (description);
+);CREATE INDEX "ix_AnalysisDataset_description_description" ON "AnalysisDataset_description" (description);CREATE INDEX "ix_AnalysisDataset_description_AnalysisDataset_id" ON "AnalysisDataset_description" ("AnalysisDataset_id");
 CREATE TABLE "AnalysisDataset_identifier" (
 	"AnalysisDataset_id" TEXT,
 	identifier TEXT,
 	PRIMARY KEY ("AnalysisDataset_id", identifier),
 	FOREIGN KEY("AnalysisDataset_id") REFERENCES "AnalysisDataset" (id)
-);CREATE INDEX "ix_AnalysisDataset_identifier_identifier" ON "AnalysisDataset_identifier" (identifier);CREATE INDEX "ix_AnalysisDataset_identifier_AnalysisDataset_id" ON "AnalysisDataset_identifier" ("AnalysisDataset_id");
+);CREATE INDEX "ix_AnalysisDataset_identifier_AnalysisDataset_id" ON "AnalysisDataset_identifier" ("AnalysisDataset_id");CREATE INDEX "ix_AnalysisDataset_identifier_identifier" ON "AnalysisDataset_identifier" (identifier);
 CREATE TABLE "AnalysisDataset_keyword" (
 	"AnalysisDataset_id" TEXT,
 	keyword TEXT,
 	PRIMARY KEY ("AnalysisDataset_id", keyword),
 	FOREIGN KEY("AnalysisDataset_id") REFERENCES "AnalysisDataset" (id)
-);CREATE INDEX "ix_AnalysisDataset_keyword_AnalysisDataset_id" ON "AnalysisDataset_keyword" ("AnalysisDataset_id");CREATE INDEX "ix_AnalysisDataset_keyword_keyword" ON "AnalysisDataset_keyword" (keyword);
+);CREATE INDEX "ix_AnalysisDataset_keyword_keyword" ON "AnalysisDataset_keyword" (keyword);CREATE INDEX "ix_AnalysisDataset_keyword_AnalysisDataset_id" ON "AnalysisDataset_keyword" ("AnalysisDataset_id");
 CREATE TABLE "AnalysisDataset_title" (
 	"AnalysisDataset_id" TEXT,
 	title TEXT NOT NULL,
@@ -1516,31 +1516,31 @@ CREATE TABLE "AnalysisDataset_version_notes" (
 	version_notes TEXT,
 	PRIMARY KEY ("AnalysisDataset_id", version_notes),
 	FOREIGN KEY("AnalysisDataset_id") REFERENCES "AnalysisDataset" (id)
-);CREATE INDEX "ix_AnalysisDataset_version_notes_AnalysisDataset_id" ON "AnalysisDataset_version_notes" ("AnalysisDataset_id");CREATE INDEX "ix_AnalysisDataset_version_notes_version_notes" ON "AnalysisDataset_version_notes" (version_notes);
+);CREATE INDEX "ix_AnalysisDataset_version_notes_version_notes" ON "AnalysisDataset_version_notes" (version_notes);CREATE INDEX "ix_AnalysisDataset_version_notes_AnalysisDataset_id" ON "AnalysisDataset_version_notes" ("AnalysisDataset_id");
 CREATE TABLE "Catalogue_description" (
 	"Catalogue_id" INTEGER,
 	description TEXT NOT NULL,
 	PRIMARY KEY ("Catalogue_id", description),
 	FOREIGN KEY("Catalogue_id") REFERENCES "Catalogue" (id)
-);CREATE INDEX "ix_Catalogue_description_Catalogue_id" ON "Catalogue_description" ("Catalogue_id");CREATE INDEX "ix_Catalogue_description_description" ON "Catalogue_description" (description);
+);CREATE INDEX "ix_Catalogue_description_description" ON "Catalogue_description" (description);CREATE INDEX "ix_Catalogue_description_Catalogue_id" ON "Catalogue_description" ("Catalogue_id");
 CREATE TABLE "Catalogue_title" (
 	"Catalogue_id" INTEGER,
 	title TEXT NOT NULL,
 	PRIMARY KEY ("Catalogue_id", title),
 	FOREIGN KEY("Catalogue_id") REFERENCES "Catalogue" (id)
-);CREATE INDEX "ix_Catalogue_title_Catalogue_id" ON "Catalogue_title" ("Catalogue_id");CREATE INDEX "ix_Catalogue_title_title" ON "Catalogue_title" (title);
+);CREATE INDEX "ix_Catalogue_title_title" ON "Catalogue_title" (title);CREATE INDEX "ix_Catalogue_title_Catalogue_id" ON "Catalogue_title" ("Catalogue_id");
 CREATE TABLE "Concept_preferred_label" (
 	"Concept_id" INTEGER,
 	preferred_label TEXT NOT NULL,
 	PRIMARY KEY ("Concept_id", preferred_label),
 	FOREIGN KEY("Concept_id") REFERENCES "Concept" (id)
-);CREATE INDEX "ix_Concept_preferred_label_Concept_id" ON "Concept_preferred_label" ("Concept_id");CREATE INDEX "ix_Concept_preferred_label_preferred_label" ON "Concept_preferred_label" (preferred_label);
+);CREATE INDEX "ix_Concept_preferred_label_preferred_label" ON "Concept_preferred_label" (preferred_label);CREATE INDEX "ix_Concept_preferred_label_Concept_id" ON "Concept_preferred_label" ("Concept_id");
 CREATE TABLE "DataAnalysis_title" (
 	"DataAnalysis_id" TEXT,
 	title TEXT,
 	PRIMARY KEY ("DataAnalysis_id", title),
 	FOREIGN KEY("DataAnalysis_id") REFERENCES "DataAnalysis" (id)
-);CREATE INDEX "ix_DataAnalysis_title_title" ON "DataAnalysis_title" (title);CREATE INDEX "ix_DataAnalysis_title_DataAnalysis_id" ON "DataAnalysis_title" ("DataAnalysis_id");
+);CREATE INDEX "ix_DataAnalysis_title_DataAnalysis_id" ON "DataAnalysis_title" ("DataAnalysis_id");CREATE INDEX "ix_DataAnalysis_title_title" ON "DataAnalysis_title" (title);
 CREATE TABLE "DataAnalysis_description" (
 	"DataAnalysis_id" TEXT,
 	description TEXT,
@@ -1564,7 +1564,7 @@ CREATE TABLE "DataService_description" (
 	description TEXT,
 	PRIMARY KEY ("DataService_id", description),
 	FOREIGN KEY("DataService_id") REFERENCES "DataService" (id)
-);CREATE INDEX "ix_DataService_description_description" ON "DataService_description" (description);CREATE INDEX "ix_DataService_description_DataService_id" ON "DataService_description" ("DataService_id");
+);CREATE INDEX "ix_DataService_description_DataService_id" ON "DataService_description" ("DataService_id");CREATE INDEX "ix_DataService_description_description" ON "DataService_description" (description);
 CREATE TABLE "DataService_keyword" (
 	"DataService_id" INTEGER,
 	keyword TEXT,
@@ -1630,7 +1630,7 @@ CREATE TABLE "EvaluatedActivity_description" (
 	description TEXT,
 	PRIMARY KEY ("EvaluatedActivity_id", description),
 	FOREIGN KEY("EvaluatedActivity_id") REFERENCES "EvaluatedActivity" (id)
-);CREATE INDEX "ix_EvaluatedActivity_description_EvaluatedActivity_id" ON "EvaluatedActivity_description" ("EvaluatedActivity_id");CREATE INDEX "ix_EvaluatedActivity_description_description" ON "EvaluatedActivity_description" (description);
+);CREATE INDEX "ix_EvaluatedActivity_description_description" ON "EvaluatedActivity_description" (description);CREATE INDEX "ix_EvaluatedActivity_description_EvaluatedActivity_id" ON "EvaluatedActivity_description" ("EvaluatedActivity_id");
 CREATE TABLE "NMRAnalysisDataset_description" (
 	"NMRAnalysisDataset_id" TEXT,
 	description TEXT NOT NULL,
@@ -1648,19 +1648,19 @@ CREATE TABLE "NMRAnalysisDataset_keyword" (
 	keyword TEXT,
 	PRIMARY KEY ("NMRAnalysisDataset_id", keyword),
 	FOREIGN KEY("NMRAnalysisDataset_id") REFERENCES "NMRAnalysisDataset" (id)
-);CREATE INDEX "ix_NMRAnalysisDataset_keyword_NMRAnalysisDataset_id" ON "NMRAnalysisDataset_keyword" ("NMRAnalysisDataset_id");CREATE INDEX "ix_NMRAnalysisDataset_keyword_keyword" ON "NMRAnalysisDataset_keyword" (keyword);
+);CREATE INDEX "ix_NMRAnalysisDataset_keyword_keyword" ON "NMRAnalysisDataset_keyword" (keyword);CREATE INDEX "ix_NMRAnalysisDataset_keyword_NMRAnalysisDataset_id" ON "NMRAnalysisDataset_keyword" ("NMRAnalysisDataset_id");
 CREATE TABLE "NMRAnalysisDataset_title" (
 	"NMRAnalysisDataset_id" TEXT,
 	title TEXT NOT NULL,
 	PRIMARY KEY ("NMRAnalysisDataset_id", title),
 	FOREIGN KEY("NMRAnalysisDataset_id") REFERENCES "NMRAnalysisDataset" (id)
-);CREATE INDEX "ix_NMRAnalysisDataset_title_title" ON "NMRAnalysisDataset_title" (title);CREATE INDEX "ix_NMRAnalysisDataset_title_NMRAnalysisDataset_id" ON "NMRAnalysisDataset_title" ("NMRAnalysisDataset_id");
+);CREATE INDEX "ix_NMRAnalysisDataset_title_NMRAnalysisDataset_id" ON "NMRAnalysisDataset_title" ("NMRAnalysisDataset_id");CREATE INDEX "ix_NMRAnalysisDataset_title_title" ON "NMRAnalysisDataset_title" (title);
 CREATE TABLE "NMRAnalysisDataset_version_notes" (
 	"NMRAnalysisDataset_id" TEXT,
 	version_notes TEXT,
 	PRIMARY KEY ("NMRAnalysisDataset_id", version_notes),
 	FOREIGN KEY("NMRAnalysisDataset_id") REFERENCES "NMRAnalysisDataset" (id)
-);CREATE INDEX "ix_NMRAnalysisDataset_version_notes_version_notes" ON "NMRAnalysisDataset_version_notes" (version_notes);CREATE INDEX "ix_NMRAnalysisDataset_version_notes_NMRAnalysisDataset_id" ON "NMRAnalysisDataset_version_notes" ("NMRAnalysisDataset_id");
+);CREATE INDEX "ix_NMRAnalysisDataset_version_notes_NMRAnalysisDataset_id" ON "NMRAnalysisDataset_version_notes" ("NMRAnalysisDataset_id");CREATE INDEX "ix_NMRAnalysisDataset_version_notes_version_notes" ON "NMRAnalysisDataset_version_notes" (version_notes);
 CREATE TABLE "NMRSpectralAnalysis_title" (
 	"NMRSpectralAnalysis_id" TEXT,
 	title TEXT,
@@ -1684,7 +1684,7 @@ CREATE TABLE "NMRSpectroscopy_description" (
 	description TEXT,
 	PRIMARY KEY ("NMRSpectroscopy_id", description),
 	FOREIGN KEY("NMRSpectroscopy_id") REFERENCES "NMRSpectroscopy" (id)
-);CREATE INDEX "ix_NMRSpectroscopy_description_NMRSpectroscopy_id" ON "NMRSpectroscopy_description" ("NMRSpectroscopy_id");CREATE INDEX "ix_NMRSpectroscopy_description_description" ON "NMRSpectroscopy_description" (description);
+);CREATE INDEX "ix_NMRSpectroscopy_description_description" ON "NMRSpectroscopy_description" (description);CREATE INDEX "ix_NMRSpectroscopy_description_NMRSpectroscopy_id" ON "NMRSpectroscopy_description" ("NMRSpectroscopy_id");
 CREATE TABLE "AgenticEntity" (
 	id TEXT NOT NULL,
 	title TEXT,
@@ -1910,31 +1910,31 @@ CREATE TABLE "CatalogueRecord_title" (
 	title TEXT,
 	PRIMARY KEY ("CatalogueRecord_id", title),
 	FOREIGN KEY("CatalogueRecord_id") REFERENCES "CatalogueRecord" (id)
-);CREATE INDEX "ix_CatalogueRecord_title_CatalogueRecord_id" ON "CatalogueRecord_title" ("CatalogueRecord_id");CREATE INDEX "ix_CatalogueRecord_title_title" ON "CatalogueRecord_title" (title);
+);CREATE INDEX "ix_CatalogueRecord_title_title" ON "CatalogueRecord_title" (title);CREATE INDEX "ix_CatalogueRecord_title_CatalogueRecord_id" ON "CatalogueRecord_title" ("CatalogueRecord_id");
 CREATE TABLE "ConceptScheme_title" (
 	"ConceptScheme_id" INTEGER,
 	title TEXT NOT NULL,
 	PRIMARY KEY ("ConceptScheme_id", title),
 	FOREIGN KEY("ConceptScheme_id") REFERENCES "ConceptScheme" (id)
-);CREATE INDEX "ix_ConceptScheme_title_ConceptScheme_id" ON "ConceptScheme_title" ("ConceptScheme_id");CREATE INDEX "ix_ConceptScheme_title_title" ON "ConceptScheme_title" (title);
+);CREATE INDEX "ix_ConceptScheme_title_title" ON "ConceptScheme_title" (title);CREATE INDEX "ix_ConceptScheme_title_ConceptScheme_id" ON "ConceptScheme_title" ("ConceptScheme_id");
 CREATE TABLE "DatasetSeries_description" (
 	"DatasetSeries_id" INTEGER,
 	description TEXT NOT NULL,
 	PRIMARY KEY ("DatasetSeries_id", description),
 	FOREIGN KEY("DatasetSeries_id") REFERENCES "DatasetSeries" (id)
-);CREATE INDEX "ix_DatasetSeries_description_description" ON "DatasetSeries_description" (description);CREATE INDEX "ix_DatasetSeries_description_DatasetSeries_id" ON "DatasetSeries_description" ("DatasetSeries_id");
+);CREATE INDEX "ix_DatasetSeries_description_DatasetSeries_id" ON "DatasetSeries_description" ("DatasetSeries_id");CREATE INDEX "ix_DatasetSeries_description_description" ON "DatasetSeries_description" (description);
 CREATE TABLE "DatasetSeries_title" (
 	"DatasetSeries_id" INTEGER,
 	title TEXT NOT NULL,
 	PRIMARY KEY ("DatasetSeries_id", title),
 	FOREIGN KEY("DatasetSeries_id") REFERENCES "DatasetSeries" (id)
-);CREATE INDEX "ix_DatasetSeries_title_DatasetSeries_id" ON "DatasetSeries_title" ("DatasetSeries_id");CREATE INDEX "ix_DatasetSeries_title_title" ON "DatasetSeries_title" (title);
+);CREATE INDEX "ix_DatasetSeries_title_title" ON "DatasetSeries_title" (title);CREATE INDEX "ix_DatasetSeries_title_DatasetSeries_id" ON "DatasetSeries_title" ("DatasetSeries_id");
 CREATE TABLE "ChemicalReaction_title" (
 	"ChemicalReaction_id" TEXT,
 	title TEXT,
 	PRIMARY KEY ("ChemicalReaction_id", title),
 	FOREIGN KEY("ChemicalReaction_id") REFERENCES "ChemicalReaction" (id)
-);CREATE INDEX "ix_ChemicalReaction_title_title" ON "ChemicalReaction_title" (title);CREATE INDEX "ix_ChemicalReaction_title_ChemicalReaction_id" ON "ChemicalReaction_title" ("ChemicalReaction_id");
+);CREATE INDEX "ix_ChemicalReaction_title_ChemicalReaction_id" ON "ChemicalReaction_title" ("ChemicalReaction_id");CREATE INDEX "ix_ChemicalReaction_title_title" ON "ChemicalReaction_title" (title);
 CREATE TABLE "ChemicalReaction_description" (
 	"ChemicalReaction_id" TEXT,
 	description TEXT,

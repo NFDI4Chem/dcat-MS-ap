@@ -5556,7 +5556,7 @@
             "type": "string"
         }
     },
-    "$id": "https://nfdi4chem.github.io/dcat-MS-ap/",
+    "$id": "https://nfdi4chem.github.io/dcat-ms-ap/",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
     "metamodel_version": "1.7.0",

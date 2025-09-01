@@ -1,5 +1,5 @@
 # metamodel_version: 1.7.0
-BASE <https://nfdi4chem.github.io/dcat-MS-ap/>
+BASE <https://nfdi4chem.github.io/dcat-ms-ap/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>

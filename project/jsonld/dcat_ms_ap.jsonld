@@ -1,6 +1,6 @@
 {
   "name": "ms",
-  "id": "https://nfdi4chem.github.io/dcat-MS-ap/",
+  "id": "https://nfdi4chem.github.io/dcat-ms-ap/",
   "imports": [
     "linkml:types",
     "dcat_ap_plus",
@@ -13,7 +13,7 @@
       "prefix_reference": "https://w3id.org/linkml/"
     }
   ],
-  "default_prefix": "https://nfdi4chem.github.io/dcat-MS-ap/",
+  "default_prefix": "https://nfdi4chem.github.io/dcat-ms-ap/",
   "default_range": "string",
   "subsets": [
     {
@@ -6706,12 +6706,12 @@
   "classes": [
     {
       "name": "MSAnalysisDataset",
-      "definition_uri": "https://nfdi4chem.github.io/dcat-MS-ap//MSAnalysisDataset",
+      "definition_uri": "https://nfdi4chem.github.io/dcat-ms-ap//MSAnalysisDataset",
       "description": "A dataset that is the result of a MSAnalysis of a ChemicalSample.",
       "comments": [
         "Initial implementation of a domain-specific schema profile for a mass spectrometry dataset."
       ],
-      "from_schema": "https://nfdi4chem.github.io/dcat-MS-ap/",
+      "from_schema": "https://nfdi4chem.github.io/dcat-ms-ap/",
       "mappings": [
         "dcat:Dataset"
       ],
@@ -6763,12 +6763,12 @@
     },
     {
       "name": "MSAnalysis",
-      "definition_uri": "https://nfdi4chem.github.io/dcat-MS-ap//MSAnalysis",
+      "definition_uri": "https://nfdi4chem.github.io/dcat-ms-ap//MSAnalysis",
       "description": "A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum.",
       "comments": [
         "Initial implementation of a domain-specific schema profile of a mass spectrometry analysis."
       ],
-      "from_schema": "https://nfdi4chem.github.io/dcat-MS-ap/",
+      "from_schema": "https://nfdi4chem.github.io/dcat-ms-ap/",
       "mappings": [
         "CHMO:0000470"
       ],
@@ -6798,12 +6798,12 @@
     },
     {
       "name": "MSSpectroscopy",
-      "definition_uri": "https://nfdi4chem.github.io/dcat-MS-ap//MSSpectroscopy",
+      "definition_uri": "https://nfdi4chem.github.io/dcat-ms-ap//MSSpectroscopy",
       "description": "Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them.",
       "comments": [
         "This class serves as an example for the way in which we want to build domain specific schema profiles. It will be outsourced to a more appropriate location in the future."
       ],
-      "from_schema": "https://nfdi4chem.github.io/dcat-MS-ap/",
+      "from_schema": "https://nfdi4chem.github.io/dcat-ms-ap/",
       "is_a": "DataGeneratingActivity",
       "slots": [
         "id",
@@ -6825,17 +6825,17 @@
         "MSSpectroscopy_rdf_type"
       ],
       "slot_usage": {},
-      "class_uri": "https://nfdi4chem.github.io/dcat-MS-ap/MSSpectroscopy",
+      "class_uri": "https://nfdi4chem.github.io/dcat-ms-ap/MSSpectroscopy",
       "@type": "ClassDefinition"
     },
     {
       "name": "MSSpectrum",
-      "definition_uri": "https://nfdi4chem.github.io/dcat-MS-ap//MSSpectrum",
+      "definition_uri": "https://nfdi4chem.github.io/dcat-ms-ap//MSSpectrum",
       "description": "A set of chemical shifts obtained via NMR spectroscopy.",
       "comments": [
         "This class serves as an example for the way in which we want to build domain specific schema profiles. It will be outsourced to a more appropriate location in the future."
       ],
-      "from_schema": "https://nfdi4chem.github.io/dcat-MS-ap/",
+      "from_schema": "https://nfdi4chem.github.io/dcat-ms-ap/",
       "mappings": [
         "NMR:1002007"
       ],
@@ -8423,9 +8423,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "dcat_ms_ap.yaml",
-  "source_file_date": "2025-08-29T11:45:45",
+  "source_file_date": "2025-09-01T19:34:07",
   "source_file_size": 5012,
-  "generation_date": "2025-08-29T11:49:51",
+  "generation_date": "2025-09-01T19:35:30",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/dcat_ms_ap.context.jsonld",
@@ -8433,7 +8433,7 @@
     "dcat_ap_plus.context.jsonld",
     "dcat_4c_ap.context.jsonld",
     {
-      "@base": "https://nfdi4chem.github.io/dcat-MS-ap/"
+      "@base": "https://nfdi4chem.github.io/dcat-ms-ap/"
     }
   ]
 }

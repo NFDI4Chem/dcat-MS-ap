@@ -1,1 +1,1 @@
-"""Tests for dcat-MS-ap."""
+"""Tests for dcat-ms-ap."""

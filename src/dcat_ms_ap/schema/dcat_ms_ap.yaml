@@ -1,4 +1,4 @@
-id: https://nfdi4chem.github.io/dcat-MS-ap/
+id: https://nfdi4chem.github.io/dcat-ms-ap/
 name: ms
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -70,17 +70,17 @@ classes:
 
 
 #---
-#id: https://w3id.org/NFDI4Chem/dcat-MS-ap
-#name: dcat-MS-ap
-#title: dcat-MS-ap
+#id: https://w3id.org/NFDI4Chem/dcat-ms-ap
+#name: dcat-ms-ap
+#title: dcat-ms-ap
 #description: |-
 #  A dcat ap implementing the recommondations fo the MS MIChI.
 #license: MIT
 #see_also:
-#  - https://NFDI4Chem.github.io/dcat-MS-ap
+#  - https://NFDI4Chem.github.io/dcat-ms-ap
 #
 #prefixes:
-#  dcat_ms_ap: https://w3id.org/NFDI4Chem/dcat-MS-ap/
+#  dcat_ms_ap: https://w3id.org/NFDI4Chem/dcat-ms-ap/
 #  linkml: https://w3id.org/linkml/
 #  biolink: https://w3id.org/biolink/
 #  schema: http://schema.org/
