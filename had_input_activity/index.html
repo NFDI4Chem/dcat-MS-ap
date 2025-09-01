@@ -395,18 +395,8 @@ Alias: had_input_activity</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../DataAnalysis/">DataAnalysis</a></td>
-<td>An Activity that evaluates the data produced by another Activity</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../EvaluatedActivity/">EvaluatedActivity</a></td>
 <td>An activity or proces that is being evaluated in a DataGeneratingActivity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../MSSpectroscopy/">MSSpectroscopy</a></td>
-<td>Spectroscopy where the energy states of spin-active nuclei placed in a static...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -415,8 +405,8 @@ Alias: had_input_activity</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ChemicalReaction/">ChemicalReaction</a></td>
-<td>An experimental procedure with the aim of producing a portion of a given comp...</td>
+<td><a href="../NMRSpectroscopy/">NMRSpectroscopy</a></td>
+<td>Spectroscopy where the energy states of spin-active nuclei placed in a static...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -425,19 +415,29 @@ Alias: had_input_activity</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DataGeneratingActivity/">DataGeneratingActivity</a></td>
-<td>An Activity (process) that has the objective to produce information (in form ...</td>
+<td><a href="../MSSpectroscopy/">MSSpectroscopy</a></td>
+<td>Spectroscopy where the energy states of spin-active nuclei placed in a static...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../NMRSpectroscopy/">NMRSpectroscopy</a></td>
-<td>Spectroscopy where the energy states of spin-active nuclei placed in a static...</td>
+<td><a href="../DataGeneratingActivity/">DataGeneratingActivity</a></td>
+<td>An Activity (process) that has the objective to produce information (in form ...</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../Activity/">Activity</a></td>
 <td>See [DCAT-AP specs:Activity](https://semiceu</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../ChemicalReaction/">ChemicalReaction</a></td>
+<td>An experimental procedure with the aim of producing a portion of a given comp...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DataAnalysis/">DataAnalysis</a></td>
+<td>An Activity that evaluates the data produced by another Activity</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -456,7 +456,7 @@ Alias: had_input_activity</p>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://nfdi4chem.github.io/dcat-MS-ap/</li>
+<li>from schema: https://nfdi4chem.github.io/dcat-ms-ap/</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -473,7 +473,7 @@ Alias: had_input_activity</p>
 </tr>
 <tr>
 <td>native</td>
-<td>https://nfdi4chem.github.io/dcat-MS-ap/had_input_activity</td>
+<td>https://nfdi4chem.github.io/dcat-ms-ap/had_input_activity</td>
 </tr>
 </tbody>
 </table>
@@ -485,7 +485,7 @@ description: The slot to provide a previous Activity that informed the Activity 
   being causally via a shared participant.
 in_subset:
 - domain_agnostic_core
-from_schema: https://nfdi4chem.github.io/dcat-MS-ap/
+from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
 rank: 1000
 slot_uri: prov:wasInformedBy
 alias: had_input_activity
