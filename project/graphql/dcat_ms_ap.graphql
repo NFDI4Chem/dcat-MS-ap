@@ -22,6 +22,12 @@ enum NMRAssayEnum
     CHMO__COLON__0000595
   }
 
+enum ScanPolarityEnum
+  {
+    negative_scan
+    positive_scan
+  }
+
 enum TopLevelMediaTypes
   {
     application
@@ -628,11 +634,11 @@ type MSSpectroscopy
     hasQualitativeAttribute: [QualitativeAttribute]
     hasQuantitativeAttribute: [QuantitativeAttribute]
     type: DefinedTerm
+    rdfType: DefinedTerm
     evaluatedActivity: [EvaluatedActivity]
     realizedPlan: Plan
     occurredIn: Surrounding
     evaluatedEntity: [ChemicalSample]
-    rdfType: DefinedTerm
   }
 
 type MSSpectrum
@@ -647,6 +653,7 @@ type MSSpectrum
     hasPart: [EvaluatedEntity]
     otherIdentifier: [Identifier]
     wasGeneratedBy: [MSSpectroscopy]
+    scanPolarity: ScanPolarityEnum!
   }
 
 type NMRAnalysisDataset

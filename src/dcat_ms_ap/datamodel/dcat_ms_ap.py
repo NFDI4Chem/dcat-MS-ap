@@ -1,10 +1,10 @@
 # Auto generated from dcat_ms_ap.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-09-01T19:35:32
-# Schema: ms
+# Generation date: 2025-09-04T11:46:51
+# Schema: dcat-ms-ap
 #
-# id: https://nfdi4chem.github.io/dcat-ms-ap/
-# description:
-# license: https://creativecommons.org/publicdomain/zero/1.0/
+# id: https://w3id.org/NFDI4Chem/dcat-ms-ap
+# description: A dcat ap implementing the recommendations fo the MS MIChI.
+# license: MIT
 
 import dataclasses
 import re
@@ -68,6 +68,7 @@ CHEBI = CurieNamespace('CHEBI', 'http://purl.obolibrary.org/obo/CHEBI_')
 CHEMINF = CurieNamespace('CHEMINF', 'http://semanticscience.org/resource/CHEMINF_')
 CHMO = CurieNamespace('CHMO', 'http://purl.obolibrary.org/obo/CHMO_')
 IAO = CurieNamespace('IAO', 'http://purl.obolibrary.org/obo/IAO_')
+MS = CurieNamespace('MS', 'http://purl.obolibrary.org/obo/MS_')
 NCIT = CurieNamespace('NCIT', 'http://purl.obolibrary.org/obo/NCIT_')
 NMR = CurieNamespace('NMR', 'http://nmrML.org/nmrCV#NMR:')
 OBI = CurieNamespace('OBI', 'http://purl.obolibrary.org/obo/OBI_')
@@ -95,7 +96,7 @@ SPDX = CurieNamespace('spdx', 'http://spdx.org/rdf/terms#')
 TIME = CurieNamespace('time', 'http://www.w3.org/2006/time#')
 VCARD = CurieNamespace('vcard', 'http://www.w3.org/2006/vcard/ns#')
 XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
-DEFAULT_ = CurieNamespace('', 'https://nfdi4chem.github.io/dcat-ms-ap/')
+DEFAULT_ = CurieNamespace('', 'https://w3id.org/NFDI4Chem/dcat-ms-ap/')
 
 
 # Types
@@ -104,7 +105,7 @@ class Duration(str):
     type_class_uri = XSD["duration"]
     type_class_curie = "xsd:duration"
     type_name = "duration"
-    type_model_uri = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Duration")
+    type_model_uri = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Duration")
 
 
 class HexBinary(str):
@@ -112,7 +113,7 @@ class HexBinary(str):
     type_class_uri = XSD["hexBinary"]
     type_class_curie = "xsd:hexBinary"
     type_name = "hexBinary"
-    type_model_uri = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/HexBinary")
+    type_model_uri = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/HexBinary")
 
 
 class NonNegativeInteger(int):
@@ -120,7 +121,7 @@ class NonNegativeInteger(int):
     type_class_uri = XSD["nonNegativeInteger"]
     type_class_curie = "xsd:nonNegativeInteger"
     type_name = "nonNegativeInteger"
-    type_model_uri = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/NonNegativeInteger")
+    type_model_uri = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/NonNegativeInteger")
 
 
 # Class references
@@ -230,7 +231,7 @@ class Activity(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = PROV["Activity"]
     class_class_curie: ClassVar[str] = "prov:Activity"
     class_name: ClassVar[str] = "Activity"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Activity")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Activity")
 
     id: Union[str, ActivityId] = None
     title: Optional[Union[str, list[str]]] = empty_list()
@@ -302,7 +303,7 @@ class Agent(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = FOAF["Agent"]
     class_class_curie: ClassVar[str] = "foaf:Agent"
     class_name: ClassVar[str] = "Agent"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Agent")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Agent")
 
     name: Union[str, list[str]] = None
     type: Optional[Union[dict, "Concept"]] = None
@@ -330,7 +331,7 @@ class AgenticEntity(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = PROV["Agent"]
     class_class_curie: ClassVar[str] = "prov:Agent"
     class_name: ClassVar[str] = "AgenticEntity"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/AgenticEntity")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/AgenticEntity")
 
     id: Union[str, AgenticEntityId] = None
     title: Optional[str] = None
@@ -389,7 +390,7 @@ class Catalogue(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCAT["Catalog"]
     class_class_curie: ClassVar[str] = "dcat:Catalog"
     class_name: ClassVar[str] = "Catalogue"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Catalogue")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Catalogue")
 
     description: Union[str, list[str]] = None
     publisher: Union[dict, Agent] = None
@@ -498,7 +499,7 @@ class CatalogueRecord(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCAT["CatalogRecord"]
     class_class_curie: ClassVar[str] = "dcat:CatalogRecord"
     class_name: ClassVar[str] = "CatalogueRecord"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/CatalogueRecord")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/CatalogueRecord")
 
     modification_date: Union[str, XSDDate] = None
     primary_topic: Union[dict, Any] = None
@@ -554,7 +555,7 @@ class Checksum(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = SPDX["Checksum"]
     class_class_curie: ClassVar[str] = "spdx:Checksum"
     class_name: ClassVar[str] = "Checksum"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Checksum")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Checksum")
 
     algorithm: Union[dict, "ChecksumAlgorithm"] = None
     checksum_value: str = None
@@ -583,7 +584,7 @@ class ClassifierMixin(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCATAP_PLUS["ClassifierMixin"]
     class_class_curie: ClassVar[str] = "dcatap_plus:ClassifierMixin"
     class_name: ClassVar[str] = "ClassifierMixin"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/ClassifierMixin")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/ClassifierMixin")
 
     type: Optional[Union[dict, "DefinedTerm"]] = None
     rdf_type: Optional[Union[dict, "DefinedTerm"]] = None
@@ -609,7 +610,7 @@ class DataGeneratingActivity(Activity):
     class_class_uri: ClassVar[URIRef] = PROV["Activity"]
     class_class_curie: ClassVar[str] = "prov:Activity"
     class_name: ClassVar[str] = "DataGeneratingActivity"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/DataGeneratingActivity")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/DataGeneratingActivity")
 
     id: Union[str, DataGeneratingActivityId] = None
     evaluated_entity: Optional[Union[dict[Union[str, EvaluatedEntityId], Union[dict, "EvaluatedEntity"]], list[Union[dict, "EvaluatedEntity"]]]] = empty_dict()
@@ -639,20 +640,18 @@ class DataGeneratingActivity(Activity):
 @dataclass(repr=False)
 class MSSpectroscopy(DataGeneratingActivity):
     """
-    Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by
-    inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of
-    radio frequency pulses with delay periods in between them.
+    Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio
+    and relative abundance.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/MSSpectroscopy")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = CHMO["0000470"]
+    class_class_curie: ClassVar[str] = "CHMO:0000470"
     class_name: ClassVar[str] = "MSSpectroscopy"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/MSSpectroscopy")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectroscopy")
 
     id: Union[str, MSSpectroscopyId] = None
     evaluated_entity: Optional[Union[dict[Union[str, ChemicalSampleId], Union[dict, "ChemicalSample"]], list[Union[dict, "ChemicalSample"]]]] = empty_dict()
-    rdf_type: Optional[Union[dict, "DefinedTerm"]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -661,9 +660,6 @@ class MSSpectroscopy(DataGeneratingActivity):
             self.id = MSSpectroscopyId(self.id)
 
         self._normalize_inlined_as_list(slot_name="evaluated_entity", slot_type=ChemicalSample, key_name="id", keyed=True)
-
-        if self.rdf_type is not None and not isinstance(self.rdf_type, DefinedTerm):
-            self.rdf_type = DefinedTerm(**as_dict(self.rdf_type))
 
         super().__post_init__(**kwargs)
 
@@ -678,7 +674,7 @@ class DataAnalysis(DataGeneratingActivity):
     class_class_uri: ClassVar[URIRef] = PROV["Activity"]
     class_class_curie: ClassVar[str] = "prov:Activity"
     class_name: ClassVar[str] = "DataAnalysis"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/DataAnalysis")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/DataAnalysis")
 
     id: Union[str, DataAnalysisId] = None
     evaluated_entity: Optional[Union[dict[Union[str, AnalysisSourceDataId], Union[dict, "AnalysisSourceData"]], list[Union[dict, "AnalysisSourceData"]]]] = empty_dict()
@@ -701,10 +697,10 @@ class MSAnalysis(DataAnalysis):
     """
     _inherited_slots: ClassVar[list[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = CHMO["0000470"]
-    class_class_curie: ClassVar[str] = "CHMO:0000470"
+    class_class_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis")
+    class_class_curie: ClassVar[str] = None
     class_name: ClassVar[str] = "MSAnalysis"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/MSAnalysis")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis")
 
     id: Union[str, MSAnalysisId] = None
     evaluated_entity: Optional[Union[dict[Union[str, MSSpectrumId], Union[dict, "MSSpectrum"]], list[Union[dict, "MSSpectrum"]]]] = empty_dict()
@@ -730,7 +726,7 @@ class DataService(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCAT["DataService"]
     class_class_curie: ClassVar[str] = "dcat:DataService"
     class_name: ClassVar[str] = "DataService"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/DataService")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/DataService")
 
     endpoint_URL: Union[Union[dict, "Resource"], list[Union[dict, "Resource"]]] = None
     title: Union[str, list[str]] = None
@@ -827,7 +823,7 @@ class Dataset(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCAT["Dataset"]
     class_class_curie: ClassVar[str] = "dcat:Dataset"
     class_name: ClassVar[str] = "Dataset"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Dataset")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Dataset")
 
     id: Union[str, DatasetId] = None
     description: Union[str, list[str]] = None
@@ -1030,7 +1026,7 @@ class AnalysisDataset(Dataset):
     class_class_uri: ClassVar[URIRef] = DCAT["Dataset"]
     class_class_curie: ClassVar[str] = "dcat:Dataset"
     class_name: ClassVar[str] = "AnalysisDataset"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/AnalysisDataset")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/AnalysisDataset")
 
     id: Union[str, AnalysisDatasetId] = None
     description: Union[str, list[str]] = None
@@ -1058,7 +1054,7 @@ class MSAnalysisDataset(AnalysisDataset):
     class_class_uri: ClassVar[URIRef] = DCAT["Dataset"]
     class_class_curie: ClassVar[str] = "dcat:Dataset"
     class_name: ClassVar[str] = "MSAnalysisDataset"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/MSAnalysisDataset")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysisDataset")
 
     id: Union[str, MSAnalysisDatasetId] = None
     description: Union[str, list[str]] = None
@@ -1089,7 +1085,7 @@ class DatasetSeries(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCAT["DatasetSeries"]
     class_class_curie: ClassVar[str] = "dcat:DatasetSeries"
     class_name: ClassVar[str] = "DatasetSeries"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/DatasetSeries")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/DatasetSeries")
 
     description: Union[str, list[str]] = None
     title: Union[str, list[str]] = None
@@ -1157,7 +1153,7 @@ class DefinedTerm(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = SCHEMA["DefinedTerm"]
     class_class_curie: ClassVar[str] = "schema:DefinedTerm"
     class_name: ClassVar[str] = "DefinedTerm"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/DefinedTerm")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/DefinedTerm")
 
     id: Union[str, DefinedTermId] = None
     title: Optional[str] = None
@@ -1189,7 +1185,7 @@ class Device(AgenticEntity):
     class_class_uri: ClassVar[URIRef] = PROV["Agent"]
     class_class_curie: ClassVar[str] = "prov:Agent"
     class_name: ClassVar[str] = "Device"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Device")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Device")
 
     id: Union[str, DeviceId] = None
     has_part: Optional[Union[dict[Union[str, DeviceId], Union[dict, "Device"]], list[Union[dict, "Device"]]]] = empty_dict()
@@ -1220,7 +1216,7 @@ class Distribution(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCAT["Distribution"]
     class_class_curie: ClassVar[str] = "dcat:Distribution"
     class_name: ClassVar[str] = "Distribution"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Distribution")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Distribution")
 
     access_URL: Union[Union[dict, "Resource"], list[Union[dict, "Resource"]]] = None
     access_service: Optional[Union[Union[dict, DataService], list[Union[dict, DataService]]]] = empty_list()
@@ -1344,7 +1340,7 @@ class Entity(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = PROV["Entity"]
     class_class_curie: ClassVar[str] = "prov:Entity"
     class_name: ClassVar[str] = "Entity"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Entity")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Entity")
 
     id: Union[str, EntityId] = None
     title: Optional[str] = None
@@ -1401,7 +1397,7 @@ class EvaluatedActivity(Activity):
     class_class_uri: ClassVar[URIRef] = PROV["Activity"]
     class_class_curie: ClassVar[str] = "prov:Activity"
     class_name: ClassVar[str] = "EvaluatedActivity"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/EvaluatedActivity")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/EvaluatedActivity")
 
     id: Union[str, EvaluatedActivityId] = None
     has_qualitative_attribute: Optional[Union[Union[dict, "QualitativeAttribute"], list[Union[dict, "QualitativeAttribute"]]]] = empty_list()
@@ -1445,7 +1441,7 @@ class EvaluatedEntity(Entity):
     class_class_uri: ClassVar[URIRef] = PROV["Entity"]
     class_class_curie: ClassVar[str] = "prov:Entity"
     class_name: ClassVar[str] = "EvaluatedEntity"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/EvaluatedEntity")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/EvaluatedEntity")
 
     id: Union[str, EvaluatedEntityId] = None
     was_generated_by: Optional[Union[dict[Union[str, ActivityId], Union[dict, Activity]], list[Union[dict, Activity]]]] = empty_dict()
@@ -1487,7 +1483,7 @@ class AnalysisSourceData(EvaluatedEntity):
     class_class_uri: ClassVar[URIRef] = PROV["Entity"]
     class_class_curie: ClassVar[str] = "prov:Entity"
     class_name: ClassVar[str] = "AnalysisSourceData"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/AnalysisSourceData")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/AnalysisSourceData")
 
     id: Union[str, AnalysisSourceDataId] = None
     was_generated_by: Optional[Union[dict[Union[str, DataGeneratingActivityId], Union[dict, DataGeneratingActivity]], list[Union[dict, DataGeneratingActivity]]]] = empty_dict()
@@ -1510,12 +1506,13 @@ class MSSpectrum(AnalysisSourceData):
     """
     _inherited_slots: ClassVar[list[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = NMR["1002007"]
-    class_class_curie: ClassVar[str] = "NMR:1002007"
+    class_class_uri: ClassVar[URIRef] = MS["1000442"]
+    class_class_curie: ClassVar[str] = "MS:1000442"
     class_name: ClassVar[str] = "MSSpectrum"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/MSSpectrum")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectrum")
 
     id: Union[str, MSSpectrumId] = None
+    scan_polarity: Union[str, "ScanPolarityEnum"] = None
     was_generated_by: Optional[Union[dict[Union[str, MSSpectroscopyId], Union[dict, MSSpectroscopy]], list[Union[dict, MSSpectroscopy]]]] = empty_dict()
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -1523,6 +1520,11 @@ class MSSpectrum(AnalysisSourceData):
             self.MissingRequiredField("id")
         if not isinstance(self.id, MSSpectrumId):
             self.id = MSSpectrumId(self.id)
+
+        if self._is_empty(self.scan_polarity):
+            self.MissingRequiredField("scan_polarity")
+        if not isinstance(self.scan_polarity, ScanPolarityEnum):
+            self.scan_polarity = ScanPolarityEnum(self.scan_polarity)
 
         self._normalize_inlined_as_list(slot_name="was_generated_by", slot_type=MSSpectroscopy, key_name="id", keyed=True)
 
@@ -1538,7 +1540,7 @@ class Kind(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = VCARD["Kind"]
     class_class_curie: ClassVar[str] = "vcard:Kind"
     class_name: ClassVar[str] = "Kind"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Kind")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Kind")
 
 
 @dataclass(repr=False)
@@ -1551,7 +1553,7 @@ class Location(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCTERMS["Location"]
     class_class_curie: ClassVar[str] = "dcterms:Location"
     class_name: ClassVar[str] = "Location"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Location")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Location")
 
     bbox: Optional[str] = None
     centroid: Optional[str] = None
@@ -1581,7 +1583,7 @@ class Plan(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = PROV["Plan"]
     class_class_curie: ClassVar[str] = "prov:Plan"
     class_name: ClassVar[str] = "Plan"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Plan")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Plan")
 
     title: Optional[str] = None
     description: Optional[str] = None
@@ -1614,7 +1616,7 @@ class QualitativeAttribute(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = PROV["Entity"]
     class_class_curie: ClassVar[str] = "prov:Entity"
     class_name: ClassVar[str] = "QualitativeAttribute"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/QualitativeAttribute")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/QualitativeAttribute")
 
     value: str = None
     title: Optional[str] = None
@@ -1653,7 +1655,7 @@ class QuantitativeAttribute(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = QUDT["Quantity"]
     class_class_curie: ClassVar[str] = "qudt:Quantity"
     class_name: ClassVar[str] = "QuantitativeAttribute"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/QuantitativeAttribute")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/QuantitativeAttribute")
 
     value: float = None
     has_quantity_type: Union[str, DefinedTermId] = None
@@ -1702,7 +1704,7 @@ class Relationship(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCAT["Relationship"]
     class_class_curie: ClassVar[str] = "dcat:Relationship"
     class_name: ClassVar[str] = "Relationship"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Relationship")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Relationship")
 
     had_role: Union[Union[dict, "Role"], list[Union[dict, "Role"]]] = None
     relation: Union[Union[dict, "Resource"], list[Union[dict, "Resource"]]] = None
@@ -1733,7 +1735,7 @@ class Software(AgenticEntity):
     class_class_uri: ClassVar[URIRef] = PROV["SoftwareAgent"]
     class_class_curie: ClassVar[str] = "prov:SoftwareAgent"
     class_name: ClassVar[str] = "Software"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Software")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Software")
 
     id: Union[str, SoftwareId] = None
     has_part: Optional[Union[dict[Union[str, SoftwareId], Union[dict, "Software"]], list[Union[dict, "Software"]]]] = empty_dict()
@@ -1764,7 +1766,7 @@ class SupportiveEntity(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = DCATAP_PLUS["SupportiveEntity"]
     class_class_curie: ClassVar[str] = "dcatap_plus:SupportiveEntity"
     class_name: ClassVar[str] = "SupportiveEntity"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/SupportiveEntity")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/SupportiveEntity")
 
 
 class Attribution(SupportiveEntity):
@@ -1776,7 +1778,7 @@ class Attribution(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = PROV["Attribution"]
     class_class_curie: ClassVar[str] = "prov:Attribution"
     class_name: ClassVar[str] = "Attribution"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Attribution")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Attribution")
 
 
 class ChecksumAlgorithm(SupportiveEntity):
@@ -1788,7 +1790,7 @@ class ChecksumAlgorithm(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = SPDX["ChecksumAlgorithm"]
     class_class_curie: ClassVar[str] = "spdx:ChecksumAlgorithm"
     class_name: ClassVar[str] = "ChecksumAlgorithm"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/ChecksumAlgorithm")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/ChecksumAlgorithm")
 
 
 @dataclass(repr=False)
@@ -1801,7 +1803,7 @@ class Concept(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = SKOS["Concept"]
     class_class_curie: ClassVar[str] = "skos:Concept"
     class_name: ClassVar[str] = "Concept"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Concept")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Concept")
 
     preferred_label: Union[str, list[str]] = None
 
@@ -1825,7 +1827,7 @@ class ConceptScheme(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = SKOS["ConceptScheme"]
     class_class_curie: ClassVar[str] = "skos:ConceptScheme"
     class_name: ClassVar[str] = "ConceptScheme"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/ConceptScheme")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/ConceptScheme")
 
     title: Union[str, list[str]] = None
 
@@ -1848,7 +1850,7 @@ class Document(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = FOAF["Document"]
     class_class_curie: ClassVar[str] = "foaf:Document"
     class_name: ClassVar[str] = "Document"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Document")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Document")
 
 
 class Frequency(SupportiveEntity):
@@ -1860,7 +1862,7 @@ class Frequency(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["Frequency"]
     class_class_curie: ClassVar[str] = "dcterms:Frequency"
     class_name: ClassVar[str] = "Frequency"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Frequency")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Frequency")
 
 
 class Geometry(SupportiveEntity):
@@ -1872,7 +1874,7 @@ class Geometry(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = LOCN["Geometry"]
     class_class_curie: ClassVar[str] = "locn:Geometry"
     class_name: ClassVar[str] = "Geometry"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Geometry")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Geometry")
 
 
 @dataclass(repr=False)
@@ -1885,7 +1887,7 @@ class Identifier(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = ADMS["Identifier"]
     class_class_curie: ClassVar[str] = "adms:Identifier"
     class_name: ClassVar[str] = "Identifier"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Identifier")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Identifier")
 
     notation: str = None
 
@@ -1907,7 +1909,7 @@ class LegalResource(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = ELI["LegalResource"]
     class_class_curie: ClassVar[str] = "eli:LegalResource"
     class_name: ClassVar[str] = "LegalResource"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/LegalResource")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/LegalResource")
 
 
 @dataclass(repr=False)
@@ -1920,7 +1922,7 @@ class LicenseDocument(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["LicenseDocument"]
     class_class_curie: ClassVar[str] = "dcterms:LicenseDocument"
     class_name: ClassVar[str] = "LicenseDocument"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/LicenseDocument")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/LicenseDocument")
 
     type: Optional[Union[Union[dict, Concept], list[Union[dict, Concept]]]] = empty_list()
 
@@ -1941,7 +1943,7 @@ class LinguisticSystem(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["LinguisticSystem"]
     class_class_curie: ClassVar[str] = "dcterms:LinguisticSystem"
     class_name: ClassVar[str] = "LinguisticSystem"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/LinguisticSystem")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/LinguisticSystem")
 
 
 class MediaType(SupportiveEntity):
@@ -1953,7 +1955,7 @@ class MediaType(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["MediaType"]
     class_class_curie: ClassVar[str] = "dcterms:MediaType"
     class_name: ClassVar[str] = "MediaType"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/MediaType")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/MediaType")
 
 
 class MediaTypeOrExtent(SupportiveEntity):
@@ -1965,7 +1967,7 @@ class MediaTypeOrExtent(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["MediaTypeOrExtent"]
     class_class_curie: ClassVar[str] = "dcterms:MediaTypeOrExtent"
     class_name: ClassVar[str] = "MediaTypeOrExtent"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/MediaTypeOrExtent")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/MediaTypeOrExtent")
 
 
 @dataclass(repr=False)
@@ -1978,7 +1980,7 @@ class PeriodOfTime(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["PeriodOfTime"]
     class_class_curie: ClassVar[str] = "dcterms:PeriodOfTime"
     class_name: ClassVar[str] = "PeriodOfTime"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/PeriodOfTime")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/PeriodOfTime")
 
     beginning: Optional[Union[dict, "TimeInstant"]] = None
     end: Optional[Union[dict, "TimeInstant"]] = None
@@ -2010,7 +2012,7 @@ class Policy(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = ODRL["Policy"]
     class_class_curie: ClassVar[str] = "odrl:Policy"
     class_name: ClassVar[str] = "Policy"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Policy")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Policy")
 
 
 class ProvenanceStatement(SupportiveEntity):
@@ -2022,7 +2024,7 @@ class ProvenanceStatement(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["ProvenanceStatement"]
     class_class_curie: ClassVar[str] = "dcterms:ProvenanceStatement"
     class_name: ClassVar[str] = "ProvenanceStatement"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/ProvenanceStatement")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/ProvenanceStatement")
 
 
 class Resource(SupportiveEntity):
@@ -2034,7 +2036,7 @@ class Resource(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = RDFS["Resource"]
     class_class_curie: ClassVar[str] = "rdfs:Resource"
     class_name: ClassVar[str] = "Resource"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Resource")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Resource")
 
 
 class RightsStatement(SupportiveEntity):
@@ -2046,7 +2048,7 @@ class RightsStatement(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["RightsStatement"]
     class_class_curie: ClassVar[str] = "dcterms:RightsStatement"
     class_name: ClassVar[str] = "RightsStatement"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/RightsStatement")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/RightsStatement")
 
 
 class Role(SupportiveEntity):
@@ -2058,7 +2060,7 @@ class Role(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCAT["Role"]
     class_class_curie: ClassVar[str] = "dcat:Role"
     class_name: ClassVar[str] = "Role"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Role")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Role")
 
 
 class Standard(SupportiveEntity):
@@ -2070,7 +2072,7 @@ class Standard(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = DCTERMS["Standard"]
     class_class_curie: ClassVar[str] = "dcterms:Standard"
     class_name: ClassVar[str] = "Standard"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Standard")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Standard")
 
 
 @dataclass(repr=False)
@@ -2083,7 +2085,7 @@ class Surrounding(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = PROV["Location"]
     class_class_curie: ClassVar[str] = "prov:Location"
     class_name: ClassVar[str] = "Surrounding"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Surrounding")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Surrounding")
 
     title: Optional[str] = None
     description: Optional[str] = None
@@ -2115,7 +2117,7 @@ class TimeInstant(SupportiveEntity):
     class_class_uri: ClassVar[URIRef] = TIME["Instant"]
     class_class_curie: ClassVar[str] = "time:Instant"
     class_name: ClassVar[str] = "TimeInstant"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/TimeInstant")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/TimeInstant")
 
 
 @dataclass(repr=False)
@@ -2128,7 +2130,7 @@ class NMRAnalysisDataset(AnalysisDataset):
     class_class_uri: ClassVar[URIRef] = DCAT["Dataset"]
     class_class_curie: ClassVar[str] = "dcat:Dataset"
     class_name: ClassVar[str] = "NMRAnalysisDataset"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/NMRAnalysisDataset")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/NMRAnalysisDataset")
 
     id: Union[str, NMRAnalysisDatasetId] = None
     description: Union[str, list[str]] = None
@@ -2159,7 +2161,7 @@ class NMRSpectralAnalysis(DataAnalysis):
     class_class_uri: ClassVar[URIRef] = NMR["1000259"]
     class_class_curie: ClassVar[str] = "NMR:1000259"
     class_name: ClassVar[str] = "NMRSpectralAnalysis"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/NMRSpectralAnalysis")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/NMRSpectralAnalysis")
 
     id: Union[str, NMRSpectralAnalysisId] = None
     evaluated_entity: Optional[Union[dict[Union[str, NMRSpectrumId], Union[dict, "NMRSpectrum"]], list[Union[dict, "NMRSpectrum"]]]] = empty_dict()
@@ -2187,7 +2189,7 @@ class NMRSpectroscopy(DataGeneratingActivity):
     class_class_uri: ClassVar[URIRef] = NFDI4C["NMRSpectroscopy"]
     class_class_curie: ClassVar[str] = "nfdi4c:NMRSpectroscopy"
     class_name: ClassVar[str] = "NMRSpectroscopy"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/NMRSpectroscopy")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/NMRSpectroscopy")
 
     id: Union[str, NMRSpectroscopyId] = None
     evaluated_entity: Optional[Union[dict[Union[str, ChemicalSampleId], Union[dict, "ChemicalSample"]], list[Union[dict, "ChemicalSample"]]]] = empty_dict()
@@ -2217,7 +2219,7 @@ class ChemicalReaction(EvaluatedActivity):
     class_class_uri: ClassVar[URIRef] = RXNO["0000329"]
     class_class_curie: ClassVar[str] = "RXNO:0000329"
     class_name: ClassVar[str] = "ChemicalReaction"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/ChemicalReaction")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/ChemicalReaction")
 
     id: Union[str, ChemicalReactionId] = None
 
@@ -2241,7 +2243,7 @@ class ChemicalSubstance(EvaluatedEntity):
     class_class_uri: ClassVar[URIRef] = PROV["Entity"]
     class_class_curie: ClassVar[str] = "prov:Entity"
     class_name: ClassVar[str] = "ChemicalSubstance"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/ChemicalSubstance")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/ChemicalSubstance")
 
     id: Union[str, ChemicalSubstanceId] = None
     composed_of: Optional[Union[Union[dict, "ChemicalEntity"], list[Union[dict, "ChemicalEntity"]]]] = empty_list()
@@ -2270,7 +2272,7 @@ class ChemicalEntity(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = CHEBI["23367"]
     class_class_curie: ClassVar[str] = "CHEBI:23367"
     class_name: ClassVar[str] = "ChemicalEntity"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/ChemicalEntity")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/ChemicalEntity")
 
     inchi: Optional[Union[dict, "InChi"]] = None
     inchikey: Optional[Union[dict, "InChIKey"]] = None
@@ -2300,7 +2302,7 @@ class ChemicalSample(ChemicalSubstance):
     class_class_uri: ClassVar[URIRef] = NFDI4C["ChemicalSample"]
     class_class_curie: ClassVar[str] = "nfdi4c:ChemicalSample"
     class_name: ClassVar[str] = "ChemicalSample"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/ChemicalSample")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/ChemicalSample")
 
     id: Union[str, ChemicalSampleId] = None
 
@@ -2323,7 +2325,7 @@ class NMRSpectrum(AnalysisSourceData):
     class_class_uri: ClassVar[URIRef] = NMR["1002007"]
     class_class_curie: ClassVar[str] = "NMR:1002007"
     class_name: ClassVar[str] = "NMRSpectrum"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/NMRSpectrum")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/NMRSpectrum")
 
     id: Union[str, NMRSpectrumId] = None
     was_generated_by: Optional[Union[dict[Union[str, NMRSpectroscopyId], Union[dict, NMRSpectroscopy]], list[Union[dict, NMRSpectroscopy]]]] = empty_dict()
@@ -2349,7 +2351,7 @@ class Laboratory(Surrounding):
     class_class_uri: ClassVar[URIRef] = PROV["Location"]
     class_class_curie: ClassVar[str] = "prov:Location"
     class_name: ClassVar[str] = "Laboratory"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/Laboratory")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/Laboratory")
 
 
 @dataclass(repr=False)
@@ -2359,7 +2361,7 @@ class InChIKey(QualitativeAttribute):
     class_class_uri: ClassVar[URIRef] = CHEMINF["000059"]
     class_class_curie: ClassVar[str] = "CHEMINF:000059"
     class_name: ClassVar[str] = "InChIKey"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/InChIKey")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/InChIKey")
 
     value: str = None
 
@@ -2373,7 +2375,7 @@ class InChi(QualitativeAttribute):
     class_class_uri: ClassVar[URIRef] = CHEMINF["000113"]
     class_class_curie: ClassVar[str] = "CHEMINF:000113"
     class_name: ClassVar[str] = "InChi"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/InChi")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/InChi")
 
     value: str = None
 
@@ -2388,7 +2390,7 @@ class IUPACChemicalFormula(QualitativeAttribute):
     class_class_uri: ClassVar[URIRef] = CHEMINF["000037"]
     class_class_curie: ClassVar[str] = "CHEMINF:000037"
     class_name: ClassVar[str] = "IUPACChemicalFormula"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/IUPACChemicalFormula")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/IUPACChemicalFormula")
 
     value: str = None
 
@@ -2403,11 +2405,24 @@ class SMILES(QualitativeAttribute):
     class_class_uri: ClassVar[URIRef] = CHEMINF["000018"]
     class_class_curie: ClassVar[str] = "CHEMINF:000018"
     class_name: ClassVar[str] = "SMILES"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://nfdi4chem.github.io/dcat-ms-ap/SMILES")
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/NFDI4Chem/dcat-ms-ap/SMILES")
 
     value: str = None
 
 # Enumerations
+class ScanPolarityEnum(EnumDefinitionImpl):
+
+    negative_scan = PermissibleValue(
+        text="negative_scan",
+        meaning=MS["1000129"])
+    positive_scan = PermissibleValue(
+        text="positive_scan",
+        meaning=MS["1000130"])
+
+    _defn = EnumDefinition(
+        name="ScanPolarityEnum",
+    )
+
 class DatasetThemes(EnumDefinitionImpl):
 
     Energy = PermissibleValue(
@@ -2837,6 +2852,9 @@ slots.chemicalEntity__smiles = Slot(uri=NFDI4C.smiles, name="chemicalEntity__smi
 slots.chemicalEntity__iupac_formula = Slot(uri=NFDI4C.iupac_formula, name="chemicalEntity__iupac_formula", curie=NFDI4C.curie('iupac_formula'),
                    model_uri=DEFAULT_.chemicalEntity__iupac_formula, domain=None, range=Optional[Union[dict, IUPACChemicalFormula]])
 
+slots.scan_polarity = Slot(uri=MS['1000465'], name="scan_polarity", curie=MS.curie('1000465'),
+                   model_uri=DEFAULT_.scan_polarity, domain=None, range=Union[str, "ScanPolarityEnum"])
+
 slots.MSAnalysisDataset_was_generated_by = Slot(uri=PROV.wasGeneratedBy, name="MSAnalysisDataset_was_generated_by", curie=PROV.curie('wasGeneratedBy'),
                    model_uri=DEFAULT_.MSAnalysisDataset_was_generated_by, domain=MSAnalysisDataset, range=Optional[Union[dict[Union[str, MSAnalysisId], Union[dict, MSAnalysis]], list[Union[dict, MSAnalysis]]]])
 
@@ -2849,11 +2867,11 @@ slots.MSAnalysis_evaluated_entity = Slot(uri=PROV.used, name="MSAnalysis_evaluat
 slots.MSSpectroscopy_evaluated_entity = Slot(uri=PROV.used, name="MSSpectroscopy_evaluated_entity", curie=PROV.curie('used'),
                    model_uri=DEFAULT_.MSSpectroscopy_evaluated_entity, domain=MSSpectroscopy, range=Optional[Union[dict[Union[str, ChemicalSampleId], Union[dict, "ChemicalSample"]], list[Union[dict, "ChemicalSample"]]]])
 
-slots.MSSpectroscopy_rdf_type = Slot(uri=RDF.type, name="MSSpectroscopy_rdf_type", curie=RDF.curie('type'),
-                   model_uri=DEFAULT_.MSSpectroscopy_rdf_type, domain=MSSpectroscopy, range=Optional[Union[dict, "DefinedTerm"]])
-
 slots.MSSpectrum_was_generated_by = Slot(uri=PROV.wasGeneratedBy, name="MSSpectrum_was_generated_by", curie=PROV.curie('wasGeneratedBy'),
                    model_uri=DEFAULT_.MSSpectrum_was_generated_by, domain=MSSpectrum, range=Optional[Union[dict[Union[str, MSSpectroscopyId], Union[dict, MSSpectroscopy]], list[Union[dict, MSSpectroscopy]]]])
+
+slots.MSSpectrum_scan_polarity = Slot(uri=MS['1000465'], name="MSSpectrum_scan_polarity", curie=MS.curie('1000465'),
+                   model_uri=DEFAULT_.MSSpectrum_scan_polarity, domain=MSSpectrum, range=Union[str, "ScanPolarityEnum"])
 
 slots.Activity_title = Slot(uri=DCTERMS.title, name="Activity_title", curie=DCTERMS.curie('title'),
                    model_uri=DEFAULT_.Activity_title, domain=Activity, range=Optional[Union[str, list[str]]])

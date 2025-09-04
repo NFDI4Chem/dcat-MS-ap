@@ -4,6 +4,7 @@
    "CHEMINF": "http://semanticscience.org/resource/CHEMINF_",
    "CHMO": "http://purl.obolibrary.org/obo/CHMO_",
    "IAO": "http://purl.obolibrary.org/obo/IAO_",
+   "MS": "http://purl.obolibrary.org/obo/MS_",
    "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
    "NMR": "http://nmrML.org/nmrCV#NMR:",
    "OBI": "http://purl.obolibrary.org/obo/OBI_",
@@ -163,16 +164,16 @@
       "@id": "dcterms:MediaTypeOrExtent"
    },
    "MSAnalysis": {
-      "@id": "CHMO:0000470"
+      "@id": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis"
    },
    "MSAnalysisDataset": {
       "@id": "dcat:Dataset"
    },
    "MSSpectroscopy": {
-      "@id": "https://nfdi4chem.github.io/dcat-ms-ap/MSSpectroscopy"
+      "@id": "CHMO:0000470"
    },
    "MSSpectrum": {
-      "@id": "NMR:1002007"
+      "@id": "MS:1000442"
    },
    "NMRAnalysisDataset": {
       "@id": "dcat:Dataset"

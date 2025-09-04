@@ -4,7 +4,7 @@ build-backend = "poetry_dynamic_versioning.backend"
 
 [project]
 name = "dcat_ms_ap"
-description = "A dcat ap implementing the recommondations fo the MS MIChI."
+description = "A dcat ap implementing the recommendations fo the MS MIChI."
 authors = [
   {name = "René Meier", email = "rmeier@ipb-halle.de"},
 ]

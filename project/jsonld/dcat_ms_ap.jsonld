@@ -1,19 +1,28 @@
 {
-  "name": "ms",
-  "id": "https://nfdi4chem.github.io/dcat-ms-ap/",
+  "name": "dcat-ms-ap",
+  "description": "A dcat ap implementing the recommendations fo the MS MIChI.",
+  "title": "dcat-ms-ap",
+  "see_also": [
+    "https://NFDI4Chem.github.io/dcat-ms-ap"
+  ],
+  "id": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
   "imports": [
     "linkml:types",
     "dcat_ap_plus",
     "dcat_4c_ap"
   ],
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license": "MIT",
   "prefixes": [
     {
       "prefix_prefix": "linkml",
       "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "MS",
+      "prefix_reference": "http://purl.obolibrary.org/obo/MS_"
     }
   ],
-  "default_prefix": "https://nfdi4chem.github.io/dcat-ms-ap/",
+  "default_prefix": "https://w3id.org/NFDI4Chem/dcat-ms-ap/",
   "default_range": "string",
   "subsets": [
     {
@@ -368,6 +377,21 @@
     }
   ],
   "enums": [
+    {
+      "name": "ScanPolarityEnum",
+      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/ScanPolarityEnum",
+      "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
+      "permissible_values": [
+        {
+          "text": "negative_scan",
+          "meaning": "MS:1000129"
+        },
+        {
+          "text": "positive_scan",
+          "meaning": "MS:1000130"
+        }
+      ]
+    },
     {
       "name": "DatasetThemes",
       "definition_uri": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DatasetThemes",
@@ -2405,6 +2429,18 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "scan_polarity",
+      "description": "The scan polarity of the spectrum.",
+      "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/MS_1000465"
+      ],
+      "slot_uri": "http://purl.obolibrary.org/obo/MS_1000465",
+      "range": "ScanPolarityEnum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "MSAnalysisDataset_was_generated_by",
       "definition_uri": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by",
       "description": "This slot is described in more detail within the class in which it is used.",
@@ -2516,45 +2552,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "MSSpectroscopy_rdf_type",
-      "definition_uri": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rdf_type",
-      "description": "The type of NMR Spectroscopy provided as CURIE of a subclass of CHMO:0000613.",
-      "in_subset": [
-        "domain_agnostic_core"
-      ],
-      "from_schema": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml",
-      "mappings": [
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-      ],
-      "is_a": "rdf_type",
-      "domain": "MSSpectroscopy",
-      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-      "alias": "rdf_type",
-      "owner": "MSSpectroscopy",
-      "domain_of": [
-        "MSSpectroscopy"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "rdf_type",
-      "range": "DefinedTerm",
-      "bindings": [
-        {
-          "range": "NMRAssayEnum",
-          "obligation_level": {
-            "text": "RECOMMENDED",
-            "description": "The metadata element is recommended to be present in the model",
-            "@type": "PermissibleValue"
-          },
-          "binds_value_of": "id",
-          "description": "NMR types from the Chemical Methods Ontology",
-          "@type": "EnumBinding"
-        }
-      ],
-      "recommended": true,
-      "inlined": true,
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "MSSpectrum_was_generated_by",
       "definition_uri": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by",
       "description": "This slot is described in more detail within the class in which it is used.",
@@ -2576,6 +2573,27 @@
       "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "MSSpectrum_scan_polarity",
+      "description": "The scan polarity of the spectrum.",
+      "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/MS_1000465"
+      ],
+      "is_a": "scan_polarity",
+      "domain": "MSSpectrum",
+      "slot_uri": "http://purl.obolibrary.org/obo/MS_1000465",
+      "alias": "scan_polarity",
+      "owner": "MSSpectrum",
+      "domain_of": [
+        "MSSpectrum"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "scan_polarity",
+      "range": "ScanPolarityEnum",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -6706,12 +6724,12 @@
   "classes": [
     {
       "name": "MSAnalysisDataset",
-      "definition_uri": "https://nfdi4chem.github.io/dcat-ms-ap//MSAnalysisDataset",
+      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysisDataset",
       "description": "A dataset that is the result of a MSAnalysis of a ChemicalSample.",
       "comments": [
         "Initial implementation of a domain-specific schema profile for a mass spectrometry dataset."
       ],
-      "from_schema": "https://nfdi4chem.github.io/dcat-ms-ap/",
+      "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
       "mappings": [
         "dcat:Dataset"
       ],
@@ -6763,15 +6781,12 @@
     },
     {
       "name": "MSAnalysis",
-      "definition_uri": "https://nfdi4chem.github.io/dcat-ms-ap//MSAnalysis",
+      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis",
       "description": "A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum.",
       "comments": [
         "Initial implementation of a domain-specific schema profile of a mass spectrometry analysis."
       ],
-      "from_schema": "https://nfdi4chem.github.io/dcat-ms-ap/",
-      "mappings": [
-        "CHMO:0000470"
-      ],
+      "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
       "is_a": "DataAnalysis",
       "slots": [
         "id",
@@ -6793,17 +6808,17 @@
         "MSAnalysis_evaluated_entity"
       ],
       "slot_usage": {},
-      "class_uri": "http://purl.obolibrary.org/obo/CHMO_0000470",
+      "class_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis",
       "@type": "ClassDefinition"
     },
     {
       "name": "MSSpectroscopy",
-      "definition_uri": "https://nfdi4chem.github.io/dcat-ms-ap//MSSpectroscopy",
-      "description": "Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them.",
-      "comments": [
-        "This class serves as an example for the way in which we want to build domain specific schema profiles. It will be outsourced to a more appropriate location in the future."
+      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectroscopy",
+      "description": "Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance.",
+      "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
+      "mappings": [
+        "CHMO:0000470"
       ],
-      "from_schema": "https://nfdi4chem.github.io/dcat-ms-ap/",
       "is_a": "DataGeneratingActivity",
       "slots": [
         "id",
@@ -6818,26 +6833,23 @@
         "Activity_has_qualitative_attribute",
         "Activity_has_quantitative_attribute",
         "ClassifierMixin_type",
+        "rdf_type",
         "evaluated_activity",
         "realized_plan",
         "occurred_in",
-        "MSSpectroscopy_evaluated_entity",
-        "MSSpectroscopy_rdf_type"
+        "MSSpectroscopy_evaluated_entity"
       ],
       "slot_usage": {},
-      "class_uri": "https://nfdi4chem.github.io/dcat-ms-ap/MSSpectroscopy",
+      "class_uri": "http://purl.obolibrary.org/obo/CHMO_0000470",
       "@type": "ClassDefinition"
     },
     {
       "name": "MSSpectrum",
-      "definition_uri": "https://nfdi4chem.github.io/dcat-ms-ap//MSSpectrum",
+      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectrum",
       "description": "A set of chemical shifts obtained via NMR spectroscopy.",
-      "comments": [
-        "This class serves as an example for the way in which we want to build domain specific schema profiles. It will be outsourced to a more appropriate location in the future."
-      ],
-      "from_schema": "https://nfdi4chem.github.io/dcat-ms-ap/",
+      "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
       "mappings": [
-        "NMR:1002007"
+        "MS:1000442"
       ],
       "is_a": "AnalysisSourceData",
       "slots": [
@@ -6850,10 +6862,11 @@
         "EvaluatedEntity_description",
         "EvaluatedEntity_has_part",
         "EvaluatedEntity_other_identifier",
-        "MSSpectrum_was_generated_by"
+        "MSSpectrum_was_generated_by",
+        "MSSpectrum_scan_polarity"
       ],
       "slot_usage": {},
-      "class_uri": "http://nmrML.org/nmrCV#NMR:1002007",
+      "class_uri": "http://purl.obolibrary.org/obo/MS_1000442",
       "@type": "ClassDefinition"
     },
     {
@@ -8423,9 +8436,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "dcat_ms_ap.yaml",
-  "source_file_date": "2025-09-01T19:34:07",
-  "source_file_size": 5012,
-  "generation_date": "2025-09-01T19:35:30",
+  "source_file_date": "2025-09-04T11:44:35",
+  "source_file_size": 2222,
+  "generation_date": "2025-09-04T11:46:50",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/dcat_ms_ap.context.jsonld",
@@ -8433,7 +8446,7 @@
     "dcat_ap_plus.context.jsonld",
     "dcat_4c_ap.context.jsonld",
     {
-      "@base": "https://nfdi4chem.github.io/dcat-ms-ap/"
+      "@base": "https://w3id.org/NFDI4Chem/dcat-ms-ap/"
     }
   ]
 }

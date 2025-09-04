@@ -8,7 +8,7 @@
       "__project_slug": "dcat_ms_ap",
       "github_org": "NFDI4Chem",
       "__source_path": "src/dcat_ms_ap/schema/dcat_ms_ap.yaml",
-      "project_description": "A dcat ap implementing the recommondations fo the MS MIChI.",
+      "project_description": "A dcat ap implementing the recommendations fo the MS MIChI.",
       "full_name": "René Meier",
       "email": "rmeier@ipb-halle.de",
       "__author": "René Meier <rmeier@ipb-halle.de>",

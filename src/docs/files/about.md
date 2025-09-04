@@ -1,3 +1,3 @@
 # dcat-ms-ap
 
-A dcat ap implementing the recommondations fo the MS MIChI.
+A dcat ap implementing the recommendations fo the MS MIChI.

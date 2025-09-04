@@ -4002,7 +4002,7 @@
         },
         "MSSpectroscopy": {
             "additionalProperties": false,
-            "description": "Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them.",
+            "description": "Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance.",
             "properties": {
                 "carried_out_by": {
                     "description": "The slot to specify the AgenticEntity that played a certain part in carrying out the Activity, either via having a specific role, function or disposition that was realized in the Activity.",
@@ -4137,7 +4137,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "The type of NMR Spectroscopy provided as CURIE of a subclass of CHMO:0000613."
+                    "description": "The slot to specify the ontology class that is instantiated by an entity."
                 },
                 "realized_plan": {
                     "anyOf": [
@@ -5400,6 +5400,15 @@
             "title": "SMILES",
             "type": "object"
         },
+        "ScanPolarityEnum": {
+            "description": "",
+            "enum": [
+                "negative_scan",
+                "positive_scan"
+            ],
+            "title": "ScanPolarityEnum",
+            "type": "string"
+        },
         "Software": {
             "additionalProperties": false,
             "description": "An instrument composed of a series of instructions that can be interpreted by or directly executed by a computer.",
@@ -5556,11 +5565,11 @@
             "type": "string"
         }
     },
-    "$id": "https://nfdi4chem.github.io/dcat-ms-ap/",
+    "$id": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
     "metamodel_version": "1.7.0",
-    "title": "ms",
+    "title": "dcat-ms-ap",
     "type": "object",
     "version": null
 }

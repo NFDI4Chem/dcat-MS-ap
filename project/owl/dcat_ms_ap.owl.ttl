@@ -1,4 +1,5 @@
 @prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix MS: <http://purl.obolibrary.org/obo/MS_> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -11,33 +12,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://nfdi4chem.github.io/dcat-ms-ap/.owl.ttl> a owl:Ontology ;
-    rdfs:label "ms" .
-
-<https://nfdi4chem.github.io/dcat-ms-ap/:QUDTQuantityKindEnum> a owl:Class .
-
-<https://nfdi4chem.github.io/dcat-ms-ap/:QUDTUnitEnum> a owl:Class .
-
-<https://nfdi4chem.github.io/dcat-ms-ap/MSAnalysisDataset> a owl:Class ;
-    rdfs:label "MSAnalysisDataset" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:is_about_entity> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSample> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:is_about_entity> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://nfdi4chem.github.io/dcat-ms-ap/MSAnalysis> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
-        <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AnalysisDataset> ;
-    skos:definition "A dataset that is the result of a MSAnalysis of a ChemicalSample." ;
-    skos:exactMatch dcat:Dataset ;
-    skos:inScheme <https://nfdi4chem.github.io/dcat-ms-ap/> ;
-    skos:note "Initial implementation of a domain-specific schema profile for a mass spectrometry dataset." .
 
 <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalReaction> a owl:Class ;
     rdfs:label "ChemicalReaction" ;
@@ -57,25 +31,56 @@
     rdfs:label "NMRAnalysisDataset" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSample> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:is_about_entity> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:is_about_entity> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:is_about_entity> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/NMRSpectralAnalysis> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSample> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:is_about_entity> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AnalysisDataset> ;
     skos:definition "A dataset that is the result of a NMRSpectralAnalysis of a ChemicalSample." ;
     skos:exactMatch dcat:Dataset ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap> ;
     skos:note "This class serves as an example for the way in which we want to build domain specific schema profiles. It will be outsourced to a more appropriate location in the future." .
 
+<https://w3id.org/NFDI4Chem/dcat-ms-ap.owl.ttl> a owl:Ontology ;
+    rdfs:label "dcat-ms-ap" ;
+    dcterms:license "MIT" ;
+    dcterms:title "dcat-ms-ap" ;
+    rdfs:seeAlso <https://NFDI4Chem.github.io/dcat-ms-ap> ;
+    skos:definition "A dcat ap implementing the recommendations fo the MS MIChI." .
+
+<https://w3id.org/NFDI4Chem/dcat-ms-ap/:QUDTQuantityKindEnum> a owl:Class .
+
+<https://w3id.org/NFDI4Chem/dcat-ms-ap/:QUDTUnitEnum> a owl:Class .
+
+<https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysisDataset> a owl:Class ;
+    rdfs:label "MSAnalysisDataset" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:is_about_entity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSample> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:is_about_entity> ],
+        <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AnalysisDataset> ;
+    skos:definition "A dataset that is the result of a MSAnalysis of a ChemicalSample." ;
+    skos:exactMatch dcat:Dataset ;
+    skos:inScheme <https://w3id.org/NFDI4Chem/dcat-ms-ap> ;
+    skos:note "Initial implementation of a domain-specific schema profile for a mass spectrometry dataset." .
+
 <http://purl.obolibrary.org/obo/CHMO_0000595> a owl:Class ;
     rdfs:label "CHMO:0000595" ;
-    rdfs:subClassOf <https://nfdi4chem.github.io/dcat-ms-ap/:NMRAssayEnum> .
+    rdfs:subClassOf <https://w3id.org/NFDI4Chem/dcat-ms-ap/:NMRAssayEnum> .
 
 xsd:hexBinary a rdfs:Datatype ;
     owl:equivalentClass [ a rdfs:Datatype ;
@@ -87,97 +92,44 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
             owl:onDatatype xsd:string ;
             owl:withRestrictions ( [ xsd:pattern "([\\-+]?[0-9]+)" ] ) ] .
 
-<https://nfdi4chem.github.io/dcat-ms-ap/:NMRAssayEnum> a owl:Class ;
-    linkml:permissible_values <http://purl.obolibrary.org/obo/CHMO_0000595> .
-
-<https://nfdi4chem.github.io/dcat-ms-ap/MSAnalysis> a owl:Class ;
-    rdfs:label "MSAnalysis" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://nfdi4chem.github.io/dcat-ms-ap/MSSpectrum> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
-        <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataAnalysis> ;
-    skos:definition "A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum." ;
-    skos:exactMatch <http://purl.obolibrary.org/obo/CHMO_0000470> ;
-    skos:inScheme <https://nfdi4chem.github.io/dcat-ms-ap/> ;
-    skos:note "Initial implementation of a domain-specific schema profile of a mass spectrometry analysis." .
-
-<https://nfdi4chem.github.io/dcat-ms-ap/MSSpectroscopy> a owl:Class ;
-    rdfs:label "MSSpectroscopy" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:rdf_type> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:rdf_type> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:rdf_type> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSample> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
-        <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataGeneratingActivity> ;
-    skos:definition "Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them." ;
-    skos:inScheme <https://nfdi4chem.github.io/dcat-ms-ap/> ;
-    skos:note "This class serves as an example for the way in which we want to build domain specific schema profiles. It will be outsourced to a more appropriate location in the future." .
-
-<https://nfdi4chem.github.io/dcat-ms-ap/MSSpectrum> a owl:Class ;
-    rdfs:label "MSSpectrum" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://nfdi4chem.github.io/dcat-ms-ap/MSSpectroscopy> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
-        <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AnalysisSourceData> ;
-    skos:definition "A set of chemical shifts obtained via NMR spectroscopy." ;
-    skos:exactMatch <http://nmrML.org/nmrCV#NMR:1002007> ;
-    skos:inScheme <https://nfdi4chem.github.io/dcat-ms-ap/> ;
-    skos:note "This class serves as an example for the way in which we want to build domain specific schema profiles. It will be outsourced to a more appropriate location in the future." .
-
 <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalEntity> a owl:Class ;
     rdfs:label "ChemicalEntity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/smiles> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchikey> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/SMILES> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/smiles> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/IUPACChemicalFormula> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/iupac_formula> ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchi> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/iupac_formula> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/iupac_formula> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchikey> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchikey> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/iupac_formula> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchi> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/InChi> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchi> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/InChIKey> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchikey> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchi> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/IUPACChemicalFormula> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/iupac_formula> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/smiles> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/InChi> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchi> ] ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/inchi> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/smiles> ] ;
     skos:definition "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." ;
     skos:exactMatch <http://purl.obolibrary.org/obo/CHEBI_23367> ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap> .
@@ -185,10 +137,10 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSubstance> a owl:Class ;
     rdfs:label "ChemicalSubstance" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalEntity> ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/composed_of> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalEntity> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/composed_of> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> ;
     skos:definition "A portion of matter of constant composition, composed of molecular entities of the same type or of different types that is being evaluated in a scientific process." ;
@@ -219,10 +171,10 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
     rdfs:label "NMRSpectralAnalysis" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/NMRSpectrum> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataAnalysis> ;
     skos:definition "A DataAnalysis which assigns a chemical structure to the peaks of a NMRSpectrum generated by a NMRSpectroscopy" ;
     skos:exactMatch <http://nmrML.org/nmrCV#NMR:1000259> ;
@@ -233,19 +185,19 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
     rdfs:label "NMRSpectroscopy" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:rdf_type> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSample> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:rdf_type> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:rdf_type> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:rdf_type> ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:rdf_type> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:rdf_type> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataGeneratingActivity> ;
     skos:definition "Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them." ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap> ;
@@ -254,11 +206,11 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/NMRSpectrum> a owl:Class ;
     rdfs:label "NMRSpectrum" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/NMRSpectroscopy> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/NMRSpectroscopy> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AnalysisSourceData> ;
     skos:definition "A set of chemical shifts obtained via NMR spectroscopy." ;
     skos:exactMatch <http://nmrML.org/nmrCV#NMR:1002007> ;
@@ -319,10 +271,10 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ConceptScheme> a owl:Class ;
     rdfs:label "ConceptScheme" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#SupportiveEntity> ;
     skos:definition "See [DCAT-AP specs:ConceptScheme](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#ConceptScheme)" ;
@@ -333,16 +285,16 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
     rdfs:label "Device" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:has_part> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Device> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:has_part> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:other_identifier> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:other_identifier> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:other_identifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Device> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:has_part> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:other_identifier> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:has_part> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AgenticEntity> ;
     skos:altLabel "hardware instrument" ;
     skos:definition "A material instrument that is designed to perform a function primarily by means of its mechanical or electrical nature." ;
@@ -378,17 +330,17 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Relationship> a owl:Class ;
     rdfs:label "Relationship" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_role> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Role> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_role> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#relation> ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#relation> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#relation> ] ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_role> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Role> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_role> ] ;
     skos:definition "See [DCAT-AP specs:Relationship](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Relationship)" ;
     skos:exactMatch dcat:Relationship ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -404,21 +356,72 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
     rdfs:label "Software" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:other_identifier> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:has_part> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:other_identifier> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:other_identifier> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Software> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:has_part> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:has_part> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:other_identifier> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:has_part> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AgenticEntity> ;
     skos:definition "An instrument composed of a series of instructions that can be interpreted by or directly executed by a computer." ;
     skos:exactMatch <http://schema.org/SoftwareApplication>,
         prov:SoftwareAgent ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
+
+<https://w3id.org/NFDI4Chem/dcat-ms-ap/:NMRAssayEnum> a owl:Class ;
+    linkml:permissible_values <http://purl.obolibrary.org/obo/CHMO_0000595> .
+
+<https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis> a owl:Class ;
+    rdfs:label "MSAnalysis" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectrum> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
+        <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataAnalysis> ;
+    skos:definition "A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum." ;
+    skos:inScheme <https://w3id.org/NFDI4Chem/dcat-ms-ap> ;
+    skos:note "Initial implementation of a domain-specific schema profile of a mass spectrometry analysis." .
+
+<https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectroscopy> a owl:Class ;
+    rdfs:label "MSSpectroscopy" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSample> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
+        <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataGeneratingActivity> ;
+    skos:definition "Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance." ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/CHMO_0000470> ;
+    skos:inScheme <https://w3id.org/NFDI4Chem/dcat-ms-ap> .
+
+<https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectrum> a owl:Class ;
+    rdfs:label "MSSpectrum" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectroscopy> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/NFDI4Chem/dcat-ms-ap/:ScanPolarityEnum> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:scan_polarity> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:scan_polarity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:scan_polarity> ],
+        <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AnalysisSourceData> ;
+    skos:definition "A set of chemical shifts obtained via NMR spectroscopy." ;
+    skos:exactMatch MS:1000442 ;
+    skos:inScheme <https://w3id.org/NFDI4Chem/dcat-ms-ap> .
 
 <http://publications.europa.eu/resource/authority/data-theme/AGRI> a owl:Class ;
     rdfs:label "Agriculture, fisheries, forestry and food" ;
@@ -476,6 +479,14 @@ xsd:nonNegativeInteger a rdfs:Datatype ;
     rdfs:label "Transport" ;
     rdfs:subClassOf <http://publications.europa.eu/resource/authority/data-theme> .
 
+MS:1000129 a owl:Class ;
+    rdfs:label "negative_scan" ;
+    rdfs:subClassOf <https://w3id.org/NFDI4Chem/dcat-ms-ap/:ScanPolarityEnum> .
+
+MS:1000130 a owl:Class ;
+    rdfs:label "positive_scan" ;
+    rdfs:subClassOf <https://w3id.org/NFDI4Chem/dcat-ms-ap/:ScanPolarityEnum> .
+
 xsd:duration a rdfs:Datatype ;
     owl:equivalentClass [ a rdfs:Datatype ;
             owl:onDatatype xsd:string ;
@@ -491,10 +502,10 @@ xsd:duration a rdfs:Datatype ;
     rdfs:label "AnalysisDataset" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataAnalysis> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> ;
     skos:definition "A Dataset that was generated by an analysis of some previously generated data. For example, a dataset that contains the data of an assignment of a chemical structure to a sample based on the spectral data obtained from the sample is an AnalyticalDataset." ;
     skos:exactMatch dcat:Dataset ;
@@ -503,74 +514,74 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#CatalogueRecord> a owl:Class ;
     rdfs:label "CatalogueRecord" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#primary_topic> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#CatalogueRecord> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source_metadata> ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#listing_date> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#listing_date> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source_metadata> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#primary_topic> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:date ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#listing_date> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#change_type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ owl:intersectionOf ( [ owl:unionOf ( <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Catalogue> <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DatasetSeries> <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataService> ) ] <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Any> ) ] ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#primary_topic> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#change_type> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#change_type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Standard> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#application_profile> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source_metadata> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LinguisticSystem> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#application_profile> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:date ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#listing_date> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#CatalogueRecord> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source_metadata> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#change_type> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#change_type> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source_metadata> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#listing_date> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#primary_topic> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Standard> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#application_profile> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#change_type> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ owl:intersectionOf ( [ owl:unionOf ( <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Catalogue> <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DatasetSeries> <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataService> ) ] <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Any> ) ] ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#primary_topic> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#application_profile> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source_metadata> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ] ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ] ;
     skos:definition "See [DCAT-AP specs:CatalogueRecord](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord)" ;
     skos:exactMatch dcat:CatalogRecord ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -578,11 +589,26 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DatasetSeries> a owl:Class ;
     rdfs:label "DatasetSeries" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Kind> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Frequency> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LegalResource> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
@@ -590,50 +616,17 @@ xsd:duration a rdfs:Datatype ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_coverage> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Frequency> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
@@ -641,14 +634,32 @@ xsd:duration a rdfs:Datatype ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#PeriodOfTime> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_coverage> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Location> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Kind> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ] ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ] ;
     skos:definition "See [DCAT-AP specs:DatasetSeries](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries)" ;
     skos:exactMatch dcat:DatasetSeries ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -656,83 +667,65 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Distribution> a owl:Class ;
     rdfs:label "Distribution" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#RightsStatement> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataService> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_service> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#MediaType> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#compression_format> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LinguisticSystem> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#compression_format> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#status> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_service> ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#availability> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+            owl:allValuesFrom xsd:decimal ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#download_URL> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_URL> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#availability> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#media_type> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Standard> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#linked_schemas> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#checksum> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
+            owl:allValuesFrom xsd:nonNegativeInteger ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#byte_size> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#MediaType> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#packaging_format> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#compression_format> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_URL> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#byte_size> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Policy> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_policy> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#RightsStatement> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#packaging_format> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#download_URL> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#compression_format> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:duration ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
@@ -741,109 +734,127 @@ xsd:duration a rdfs:Datatype ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#checksum> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LicenseDocument> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_policy> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#availability> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#status> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#MediaType> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#media_type> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Standard> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#linked_schemas> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#status> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:nonNegativeInteger ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#byte_size> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#checksum> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_policy> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#byte_size> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#download_URL> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:decimal ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#media_type> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#compression_format> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#MediaTypeOrExtent> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#linked_schemas> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LegalResource> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#MediaTypeOrExtent> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#media_type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#MediaType> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#packaging_format> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#availability> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#byte_size> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_URL> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#checksum> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_policy> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#checksum> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LicenseDocument> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_URL> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#download_URL> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataService> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_service> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#linked_schemas> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#status> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Policy> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_policy> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#compression_format> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:duration ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_service> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#availability> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#status> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#packaging_format> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#packaging_format> ] ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LinguisticSystem> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ] ;
     skos:definition "See [DCAT-AP specs:Distribution](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution)" ;
     skos:exactMatch dcat:Distribution ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -866,21 +877,21 @@ xsd:duration a rdfs:Datatype ;
     rdfs:label "Plan" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ClassifierMixin> ;
     skos:altLabel "Method",
@@ -1150,10 +1161,10 @@ xsd:duration a rdfs:Datatype ;
     rdfs:label "AnalysisSourceData" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataGeneratingActivity> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:was_generated_by> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:was_generated_by> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> ;
     skos:definition "Information that was evaluated within a DataAnalysis." ;
     skos:exactMatch prov:Entity ;
@@ -1162,65 +1173,80 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Catalogue> a owl:Class ;
     rdfs:label "Catalogue" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Catalogue> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Catalogue> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#catalogue> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Location> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_coverage> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ConceptScheme> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#themes> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Catalogue> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LinguisticSystem> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#themes> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#service> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Location> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#RightsStatement> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_dataset> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#catalogue> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#service> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#CatalogueRecord> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#record> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#record> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#homepage> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataService> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#service> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#homepage> ],
@@ -1228,74 +1254,59 @@ xsd:duration a rdfs:Datatype ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LegalResource> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Catalogue> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#catalogue> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#homepage> ],
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#record> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LicenseDocument> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_coverage> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ConceptScheme> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#themes> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#themes> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_dataset> ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_dataset> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#homepage> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rights> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#CatalogueRecord> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#record> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#catalogue> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#PeriodOfTime> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_coverage> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LicenseDocument> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataService> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#service> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ] ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LinguisticSystem> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ] ;
     skos:definition "See [DCAT-AP specs:Catalogue](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue)" ;
     skos:exactMatch dcat:Catalog ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -1304,10 +1315,10 @@ xsd:duration a rdfs:Datatype ;
     rdfs:label "DataAnalysis" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AnalysisSourceData> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:evaluated_entity> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:evaluated_entity> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataGeneratingActivity> ;
     skos:closeMatch <http://purl.obolibrary.org/obo/NCIT_C25391> ;
     skos:definition "An Activity that evaluates the data produced by another Activity." ;
@@ -1318,110 +1329,110 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataService> a owl:Class ;
     rdfs:label "DataService" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#endpoint_URL> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#theme> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Kind> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LicenseDocument> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#MediaTypeOrExtent> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#keyword> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#RightsStatement> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#endpoint_description> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#landing_page> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#keyword> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LegalResource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#conforms_to> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Standard> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#conforms_to> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Kind> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#endpoint_URL> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#endpoint_description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#theme> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#serves_dataset> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#serves_dataset> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Standard> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#conforms_to> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#endpoint_description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LicenseDocument> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#theme> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#endpoint_URL> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#keyword> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#theme> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#conforms_to> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#landing_page> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#licence> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#landing_page> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#keyword> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#MediaTypeOrExtent> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#format> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LegalResource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#endpoint_URL> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#landing_page> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#serves_dataset> ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#endpoint_description> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ] ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ] ;
     skos:definition "See [DCAT-AP specs:DataService](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService)" ;
     skos:exactMatch dcat:DataService ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -1448,32 +1459,32 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Location> a owl:Class ;
     rdfs:label "Location" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#bbox> ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#centroid> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#bbox> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geometry> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#bbox> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Geometry> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geometry> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#centroid> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#bbox> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#centroid> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geometry> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#bbox> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#centroid> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geometry> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geometry> ] ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#centroid> ] ;
     skos:definition "See [DCAT-AP specs:Location](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location)" ;
     skos:exactMatch dcterms:Location ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -1488,41 +1499,41 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#PeriodOfTime> a owl:Class ;
     rdfs:label "PeriodOfTime" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#TimeInstant> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:date ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#start_date> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#TimeInstant> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#TimeInstant> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#beginning> ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#beginning> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end_date> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end_date> ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#start_date> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:date ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end_date> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#beginning> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#start_date> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#start_date> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#start_date> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#TimeInstant> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#beginning> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end_date> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#end_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#beginning> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#SupportiveEntity> ;
     skos:definition "See [DCAT-AP specs:PeriodOfTime](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#PeriodOfTime)" ;
     skos:exactMatch dcterms:PeriodOfTime ;
@@ -1532,22 +1543,22 @@ xsd:duration a rdfs:Datatype ;
     rdfs:label "Surrounding" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ClassifierMixin> ;
     skos:definition "The surrounding in which the dataset creating activity took place (e.g. a lab)." ;
     skos:exactMatch prov:Location ;
@@ -1717,6 +1728,11 @@ xsd:duration a rdfs:Datatype ;
     skos:definition "This slot is described in more detail within the class in which it is used." ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
 
+<https://w3id.org/NFDI4Chem/dcat-ms-ap/:ScanPolarityEnum> a owl:Class ;
+    owl:unionOf ( MS:1000129 MS:1000130 ) ;
+    linkml:permissible_values MS:1000129,
+        MS:1000130 .
+
 <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSample> a owl:Class ;
     rdfs:label "ChemicalSample" ;
     rdfs:subClassOf <https://stroemphi.github.io/dcat-4C-ap/dcat_4c_ap/ChemicalSubstance> ;
@@ -1771,56 +1787,56 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AgenticEntity> a owl:Class ;
     rdfs:label "AgenticEntity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AgenticEntity> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AgenticEntity> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QuantitativeAttribute> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QualitativeAttribute> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:anyURI ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QuantitativeAttribute> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QualitativeAttribute> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ClassifierMixin> ;
     skos:definition "An entity that is somehow responsible for an Activity to take place." ;
     skos:exactMatch prov:Agent ;
@@ -1832,31 +1848,31 @@ xsd:duration a rdfs:Datatype ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#realized_plan> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedActivity> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_activity> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#occurred_in> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Surrounding> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#occurred_in> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_entity> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#occurred_in> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#realized_plan> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_activity> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#realized_plan> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_entity> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedActivity> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_activity> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Plan> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#realized_plan> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#occurred_in> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_entity> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Activity> ;
     skos:definition "An Activity (process) that has the objective to produce information (in form of a dataset) about another Activity or Entity." ;
@@ -1866,32 +1882,32 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DefinedTerm> a owl:Class ;
     rdfs:label "DefinedTerm" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#from_CV> ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#from_CV> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#from_CV> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#from_CV> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ] ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#from_CV> ] ;
     skos:definition "A word, name, acronym or phrase that is defined in a controlled vocabulary (CV) and that is used to provide an additional rdf:type or dcterms:type of a class within this schema." ;
     skos:exactMatch <http://schema.org/DefinedTerm> ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -1906,50 +1922,50 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QuantitativeAttribute> a owl:Class ;
     rdfs:label "QuantitativeAttribute" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DefinedTerm> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#unit> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantity_type> ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantity_type> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DefinedTerm> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantity_type> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#unit> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DefinedTerm> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#unit> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#unit> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:float ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#unit> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantity_type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DefinedTerm> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantity_type> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#unit> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ClassifierMixin> ;
     skos:definition "A quantifiable piece of information that is attributed to an Entity, Activity or AgenticEntity." ;
     skos:exactMatch <http://qudt.org/schema/qudt/Quantity> ;
@@ -1968,59 +1984,8 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Activity> a owl:Class ;
     rdfs:label "Activity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QuantitativeAttribute> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_output_entity> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_input_entity> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_input_activity> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#carried_out_by> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Entity> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_input_entity> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Activity> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_input_activity> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#AgenticEntity> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#carried_out_by> ],
@@ -2028,17 +1993,68 @@ xsd:duration a rdfs:Datatype ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QualitativeAttribute> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Activity> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Entity> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_output_entity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Activity> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_input_activity> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Entity> ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_output_entity> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#carried_out_by> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_input_entity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#had_input_activity> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QuantitativeAttribute> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ClassifierMixin> ;
     skos:definition "See [DCAT-AP specs:Activity](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Activity)" ;
     skos:editorialNote "The specified properties (slots) of this class are part of our extension of the DCAT-AP." ;
@@ -2051,16 +2067,16 @@ xsd:duration a rdfs:Datatype ;
             owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#name> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#name> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ] ;
     skos:definition "See [DCAT-AP specs:Agent](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent)" ;
     skos:exactMatch foaf:Agent ;
@@ -2069,227 +2085,32 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> a owl:Class ;
     rdfs:label "Dataset" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#qualified_relation> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#in_series> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_version> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#keyword> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataGeneratingActivity> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Kind> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#qualified_attribution> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:decimal ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_referenced_by> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_about_entity> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#provenance> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DatasetSeries> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#in_series> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LinguisticSystem> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#dataset_distribution> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_version> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version_notes> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#theme> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#related_resource> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#conforms_to> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#related_resource> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:anyURI ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#identifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_about_entity> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version_notes> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#theme> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Frequency> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedActivity> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_about_activity> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_version> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:date ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Attribution> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#qualified_attribution> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ProvenanceStatement> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#provenance> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#landing_page> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#identifier> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Distribution> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#dataset_distribution> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#keyword> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version_notes> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_referenced_by> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LegalResource> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_coverage> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Relationship> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#qualified_relation> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Standard> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#conforms_to> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#PeriodOfTime> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_coverage> ],
@@ -2297,38 +2118,233 @@ xsd:duration a rdfs:Datatype ;
             owl:allValuesFrom xsd:duration ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#keyword> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_referenced_by> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#RightsStatement> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#provenance> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Dataset> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#landing_page> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Location> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#landing_page> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_referenced_by> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Distribution> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#sample> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DataGeneratingActivity> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_about_activity> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Relationship> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#qualified_relation> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_resolution> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#identifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Location> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#geographical_coverage> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#access_rights> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_about_entity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version_notes> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:decimal ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#source> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Attribution> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#qualified_attribution> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#qualified_attribution> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#frequency> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Distribution> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#sample> ] ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#dataset_distribution> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#identifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Kind> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#contact_point> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Document> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#documentation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#qualified_relation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_about_activity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#temporal_coverage> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Standard> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#conforms_to> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedActivity> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_about_activity> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#version> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#spatial_resolution> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#in_series> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#publisher> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ProvenanceStatement> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#provenance> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#related_resource> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#is_about_entity> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DatasetSeries> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#in_series> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#dataset_distribution> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_version> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#keyword> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LinguisticSystem> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#language> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#conforms_to> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#LegalResource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#applicable_legislation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#theme> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Agent> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#creator> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#modification_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#sample> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Resource> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#related_resource> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#theme> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#release_date> ] ;
     skos:definition "A collection of data, published or curated by a single agent, and available for access or download in one or more representations." ;
     skos:exactMatch dcat:Dataset ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
@@ -2343,56 +2359,56 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Entity> a owl:Class ;
     rdfs:label "Entity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QuantitativeAttribute> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom xsd:anyURI ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Entity> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QualitativeAttribute> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QuantitativeAttribute> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Entity> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#id> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#other_identifier> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ClassifierMixin> ;
     skos:definition "A physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." ;
     skos:exactMatch prov:Entity ;
@@ -2404,26 +2420,26 @@ xsd:duration a rdfs:Datatype ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QuantitativeAttribute> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QualitativeAttribute> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:other_identifier> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:other_identifier> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedActivity> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:other_identifier> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_qualitative_attribute> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:other_identifier> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_quantitative_attribute> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#has_part> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Activity> ;
     skos:definition "An activity or proces that is being evaluated in a DataGeneratingActivity." ;
     skos:exactMatch prov:Activity ;
@@ -2482,64 +2498,64 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ClassifierMixin> a owl:Class ;
     rdfs:label "ClassifierMixin" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rdf_type> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DefinedTerm> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rdf_type> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#DefinedTerm> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rdf_type> ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rdf_type> ] ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#rdf_type> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#type> ] ;
     skos:definition "A mixin with which an entity of this schema can be classified via an additional rdf:type or dcterms:type assertion." ;
     skos:inScheme <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml> .
 
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> a owl:Class ;
     rdfs:label "EvaluatedEntity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:title> ],
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:has_part> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:other_identifier> ],
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:title> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:other_identifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:title> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:description> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:title> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:other_identifier> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:has_part> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Activity> ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#EvaluatedEntity> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:has_part> ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:title> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:description> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:has_part> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Identifier> ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:other_identifier> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://nfdi4chem.github.io/dcat-ms-ap/:description> ],
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://w3id.org/NFDI4Chem/dcat-ms-ap/:description> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Entity> ;
     skos:definition "An Entity that is being evaluated in a DataGeneratingActivity." ;
     skos:exactMatch prov:Entity ;
@@ -2555,10 +2571,10 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#Concept> a owl:Class ;
     rdfs:label "Concept" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#preferred_label> ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#preferred_label> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#SupportiveEntity> ;
     skos:definition "See [DCAT-AP specs:Concept](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Concept)" ;
@@ -2571,10 +2587,10 @@ xsd:duration a rdfs:Datatype ;
             owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#notation> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#notation> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#notation> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#SupportiveEntity> ;
     skos:definition "See [DCAT-AP specs:Identifier](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier)" ;
@@ -2606,31 +2622,31 @@ xsd:duration a rdfs:Datatype ;
 <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#QualitativeAttribute> a owl:Class ;
     rdfs:label "QualitativeAttribute" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl:Thing ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#value> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#description> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#title> ],
         <https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#ClassifierMixin> ;
     skos:definition "A piece of information that is attributed to an Entity, Activity or AgenticEntity." ;

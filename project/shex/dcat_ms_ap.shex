@@ -1,5 +1,5 @@
 # metamodel_version: 1.7.0
-BASE <https://nfdi4chem.github.io/dcat-ms-ap/>
+BASE <https://w3id.org/NFDI4Chem/dcat-ms-ap/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -601,7 +601,7 @@ dcatap_plus:MediaTypeOrExtent CLOSED {
           rdf:type [ prov:Activity ] ? ;
           prov:used @<MSSpectrum> *
        ) ;
-       rdf:type [ <http://purl.obolibrary.org/obo/CHMO_0000470> ]
+       rdf:type [ <MSAnalysis> ]
     )
 }
 
@@ -618,19 +618,20 @@ dcatap_plus:MediaTypeOrExtent CLOSED {
 <MSSpectroscopy> CLOSED {
     (  $<MSSpectroscopy_tes> (  &dcatap_plus:DataGeneratingActivity_tes ;
           rdf:type [ prov:Activity ] ? ;
-          prov:used @nfdi4c:ChemicalSample * ;
-          rdf:type @dcatap_plus:DefinedTerm ?
+          prov:used @nfdi4c:ChemicalSample *
        ) ;
-       rdf:type [ <MSSpectroscopy> ]
+       rdf:type [ <http://purl.obolibrary.org/obo/CHMO_0000470> ]
     )
 }
 
 <MSSpectrum> CLOSED {
     (  $<MSSpectrum_tes> (  &dcatap_plus:AnalysisSourceData_tes ;
           rdf:type [ prov:Entity ] ? ;
-          prov:wasGeneratedBy @<MSSpectroscopy> *
+          prov:wasGeneratedBy @<MSSpectroscopy> * ;
+          <http://purl.obolibrary.org/obo/MS_1000465> [ <http://purl.obolibrary.org/obo/MS_1000129>
+             <http://purl.obolibrary.org/obo/MS_1000130> ]
        ) ;
-       rdf:type [ NMR:1002007 ]
+       rdf:type [ <http://purl.obolibrary.org/obo/MS_1000442> ]
     )
 }
 

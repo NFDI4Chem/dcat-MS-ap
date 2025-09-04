@@ -526,7 +526,7 @@ message MSAnalysisDataset
  repeated  mSAnalysis wasGeneratedBy = 0
  repeated  chemicalSample isAboutEntity = 0
  }
-// Spectroscopy where the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them.
+// Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance.
 message MSSpectroscopy
  {
   uriorcurie id = 0
@@ -541,11 +541,11 @@ message MSSpectroscopy
  repeated  qualitativeAttribute hasQualitativeAttribute = 0
  repeated  quantitativeAttribute hasQuantitativeAttribute = 0
   definedTerm type = 0
+  definedTerm rdfType = 0
  repeated  evaluatedActivity evaluatedActivity = 0
   plan realizedPlan = 0
   surrounding occurredIn = 0
  repeated  chemicalSample evaluatedEntity = 0
-  definedTerm rdfType = 0
  }
 // A set of chemical shifts obtained via NMR spectroscopy.
 message MSSpectrum
@@ -560,6 +560,7 @@ message MSSpectrum
  repeated  evaluatedEntity hasPart = 0
  repeated  identifier otherIdentifier = 0
  repeated  mSSpectroscopy wasGeneratedBy = 0
+  scanPolarityEnum scanPolarity = 0
  }
 // A dataset that is the result of a NMRSpectralAnalysis of a ChemicalSample.
 message NMRAnalysisDataset
