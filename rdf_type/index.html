@@ -381,63 +381,18 @@ Alias: rdf_type</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Software/">Software</a></td>
-<td>An instrument composed of a series of instructions that can be interpreted by...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Device/">Device</a></td>
-<td>A material instrument that is designed to perform a function primarily by mea...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../QuantitativeAttribute/">QuantitativeAttribute</a></td>
-<td>A quantifiable piece of information that is attributed to an Entity, Activity...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../QualitativeAttribute/">QualitativeAttribute</a></td>
-<td>A piece of information that is attributed to an Entity, Activity or AgenticEn...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ClassifierMixin/">ClassifierMixin</a></td>
-<td>A mixin with which an entity of this schema can be classified via an addition...</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../Entity/">Entity</a></td>
 <td>A physical, digital, conceptual, or other kind of thing with some fixed aspec...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../InChIKey/">InChIKey</a></td>
-<td></td>
+<td><a href="../MSAnalysis/">MSAnalysis</a></td>
+<td>A DataAnalysis which identifies and/or quantifies molecules in a mass spectru...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ChemicalSubstance/">ChemicalSubstance</a></td>
-<td>A portion of matter of constant composition, composed of molecular entities o...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DataGeneratingActivity/">DataGeneratingActivity</a></td>
-<td>An Activity (process) that has the objective to produce information (in form ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NMRSpectrum/">NMRSpectrum</a></td>
-<td>A set of chemical shifts obtained via NMR spectroscopy</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ChemicalReaction/">ChemicalReaction</a></td>
-<td>An experimental procedure with the aim of producing a portion of a given comp...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Activity/">Activity</a></td>
-<td>See [DCAT-AP specs:Activity](https://semiceu</td>
+<td><a href="../EvaluatedActivity/">EvaluatedActivity</a></td>
+<td>An activity or proces that is being evaluated in a DataGeneratingActivity</td>
 <td>no</td>
 </tr>
 <tr>
@@ -446,12 +401,17 @@ Alias: rdf_type</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../NMRSpectralAnalysis/">NMRSpectralAnalysis</a></td>
-<td>A DataAnalysis which assigns a chemical structure to the peaks of a NMRSpectr...</td>
+<td><a href="../DataAnalysis/">DataAnalysis</a></td>
+<td>An Activity that evaluates the data produced by another Activity</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../MSSpectrum/">MSSpectrum</a></td>
+<td><a href="../NMRSpectroscopy/">NMRSpectroscopy</a></td>
+<td>Spectroscopy where the energy states of spin-active nuclei placed in a static...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../NMRSpectrum/">NMRSpectrum</a></td>
 <td>A set of chemical shifts obtained via NMR spectroscopy</td>
 <td>no</td>
 </tr>
@@ -461,43 +421,13 @@ Alias: rdf_type</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../InChi/">InChi</a></td>
-<td>A structure descriptor which conforms to the InChI format specification</td>
+<td><a href="../MSSpectrum/">MSSpectrum</a></td>
+<td>A set of chemical shifts obtained via NMR spectroscopy</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../MSSpectroscopy/">MSSpectroscopy</a></td>
-<td>Spectroscopy where the energy states of spin-active nuclei placed in a static...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../EvaluatedActivity/">EvaluatedActivity</a></td>
-<td>An activity or proces that is being evaluated in a DataGeneratingActivity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NMRSpectroscopy/">NMRSpectroscopy</a></td>
-<td>Spectroscopy where the energy states of spin-active nuclei placed in a static...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../ChemicalSample/">ChemicalSample</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Surrounding/">Surrounding</a></td>
-<td>The surrounding in which the dataset creating activity took place (e</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../EvaluatedEntity/">EvaluatedEntity</a></td>
-<td>An Entity that is being evaluated in a DataGeneratingActivity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Plan/">Plan</a></td>
-<td>A piece of information that specifies how an activity has to be carried out b...</td>
+<td><a href="../NMRSpectralAnalysis/">NMRSpectralAnalysis</a></td>
+<td>A DataAnalysis which assigns a chemical structure to the peaks of a NMRSpectr...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -506,8 +436,68 @@ Alias: rdf_type</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Laboratory/">Laboratory</a></td>
-<td>A facility that provides controlled conditions in which scientific or technol...</td>
+<td><a href="../Surrounding/">Surrounding</a></td>
+<td>The surrounding in which the dataset creating activity took place (e</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Device/">Device</a></td>
+<td>A material instrument that is designed to perform a function primarily by mea...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ClassifierMixin/">ClassifierMixin</a></td>
+<td>A mixin with which an entity of this schema can be classified via an addition...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ChemicalSubstance/">ChemicalSubstance</a></td>
+<td>A portion of matter of constant composition, composed of molecular entities o...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../EvaluatedEntity/">EvaluatedEntity</a></td>
+<td>An Entity that is being evaluated in a DataGeneratingActivity</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../MSSpectroscopy/">MSSpectroscopy</a></td>
+<td>Spectrometry where the sample is converted into gaseous ions which are charac...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ChemicalReaction/">ChemicalReaction</a></td>
+<td>An experimental procedure with the aim of producing a portion of a given comp...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ChemicalSample/">ChemicalSample</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../InChIKey/">InChIKey</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Plan/">Plan</a></td>
+<td>A piece of information that specifies how an activity has to be carried out b...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../QualitativeAttribute/">QualitativeAttribute</a></td>
+<td>A piece of information that is attributed to an Entity, Activity or AgenticEn...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../InChi/">InChi</a></td>
+<td>A structure descriptor which conforms to the InChI format specification</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../QuantitativeAttribute/">QuantitativeAttribute</a></td>
+<td>A quantifiable piece of information that is attributed to an Entity, Activity...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -516,13 +506,23 @@ Alias: rdf_type</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DataAnalysis/">DataAnalysis</a></td>
-<td>An Activity that evaluates the data produced by another Activity</td>
+<td><a href="../Software/">Software</a></td>
+<td>An instrument composed of a series of instructions that can be interpreted by...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../MSAnalysis/">MSAnalysis</a></td>
-<td>A DataAnalysis which identifies and/or quantifies molecules in a mass spectru...</td>
+<td><a href="../DataGeneratingActivity/">DataGeneratingActivity</a></td>
+<td>An Activity (process) that has the objective to produce information (in form ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Activity/">Activity</a></td>
+<td>See [DCAT-AP specs:Activity](https://semiceu</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Laboratory/">Laboratory</a></td>
+<td>A facility that provides controlled conditions in which scientific or technol...</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -539,7 +539,7 @@ Alias: rdf_type</p>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://nfdi4chem.github.io/dcat-ms-ap/</li>
+<li>from schema: https://w3id.org/NFDI4Chem/dcat-ms-ap</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -556,7 +556,7 @@ Alias: rdf_type</p>
 </tr>
 <tr>
 <td>native</td>
-<td>https://nfdi4chem.github.io/dcat-ms-ap/rdf_type</td>
+<td>https://w3id.org/NFDI4Chem/dcat-ms-ap/rdf_type</td>
 </tr>
 </tbody>
 </table>
@@ -567,7 +567,7 @@ Alias: rdf_type</p>
 description: The slot to specify the ontology class that is instantiated by an entity.
 in_subset:
 - domain_agnostic_core
-from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
 rank: 1000
 slot_uri: rdf:type
 alias: rdf_type

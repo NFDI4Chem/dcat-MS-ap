@@ -172,13 +172,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#comments">
-<span class="md-ellipsis">
-      Comments
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
 <span class="md-ellipsis">
       Identifier and Mapping Information
@@ -237,7 +230,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-msspectrum">Class: MSSpectrum</h1>
 <p><em>A set of chemical shifts obtained via NMR spectroscopy.</em></p>
-<p>URI: <a href="http://nmrML.org/nmrCV#NMR:1002007">NMR:1002007</a></p>
+<p>URI: <a href="http://purl.obolibrary.org/obo/MS_1000442">MS:1000442</a></p>
 <div class="mermaid"> classDiagram
     class MSSpectrum
     click MSSpectrum href "../MSSpectrum/"
@@ -434,14 +427,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="comments">Comments</h2>
-<ul>
-<li>This class serves as an example for the way in which we want to build domain specific schema profiles. It will be outsourced to a more appropriate location in the future.</li>
-</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://nfdi4chem.github.io/dcat-ms-ap/</li>
+<li>from schema: https://w3id.org/NFDI4Chem/dcat-ms-ap</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -454,11 +443,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>NMR:1002007</td>
+<td>MS:1000442</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://nfdi4chem.github.io/dcat-ms-ap/MSSpectrum</td>
+<td>https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectrum</td>
 </tr>
 </tbody>
 </table>
@@ -468,10 +457,7 @@
 <details>
 <pre><code class="language-yaml">name: MSSpectrum
 description: A set of chemical shifts obtained via NMR spectroscopy.
-comments:
-- This class serves as an example for the way in which we want to build domain specific
-  schema profiles. It will be outsourced to a more appropriate location in the future.
-from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
 is_a: AnalysisSourceData
 slot_usage:
   was_generated_by:
@@ -479,7 +465,13 @@ slot_usage:
     range: MSSpectroscopy
     multivalued: true
     inlined_as_list: true
-class_uri: NMR:1002007
+  scan_polarity:
+    name: scan_polarity
+    description: The scan polarity of the spectrum.
+    slot_uri: MS:1000465
+    range: ScanPolarityEnum
+    required: true
+class_uri: MS:1000442
 
 </code></pre>
 </details>
@@ -487,10 +479,7 @@ class_uri: NMR:1002007
 <details>
 <pre><code class="language-yaml">name: MSSpectrum
 description: A set of chemical shifts obtained via NMR spectroscopy.
-comments:
-- This class serves as an example for the way in which we want to build domain specific
-  schema profiles. It will be outsourced to a more appropriate location in the future.
-from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
 is_a: AnalysisSourceData
 slot_usage:
   was_generated_by:
@@ -498,11 +487,17 @@ slot_usage:
     range: MSSpectroscopy
     multivalued: true
     inlined_as_list: true
+  scan_polarity:
+    name: scan_polarity
+    description: The scan polarity of the spectrum.
+    slot_uri: MS:1000465
+    range: ScanPolarityEnum
+    required: true
 attributes:
   was_generated_by:
     name: was_generated_by
     description: A slot to provide the Activity which created the AnalysisSourceData.
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: prov:wasGeneratedBy
     alias: was_generated_by
@@ -516,7 +511,7 @@ attributes:
   title:
     name: title
     description: The slot to provide a title for the EvaluatedEntity.
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:title
     alias: title
@@ -541,7 +536,7 @@ attributes:
   description:
     name: description
     description: The slot to provide a description for the EvaluatedEntity.
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:description
     alias: description
@@ -566,7 +561,7 @@ attributes:
     description: A slot to provide an URI for an entity within this schema.
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     identifier: true
     alias: id
@@ -582,7 +577,7 @@ attributes:
   other_identifier:
     name: other_identifier
     description: A slot to provide a secondary identifier of the EvaluatedEntity.
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: adms:identifier
     alias: other_identifier
@@ -602,7 +597,7 @@ attributes:
       EvaluatedActivity or AgenticEntity
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:relation
     alias: has_qualitative_attribute
@@ -623,7 +618,7 @@ attributes:
       EvaluatedActivity or AgenticEntity
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:relation
     alias: has_quantitative_attribute
@@ -641,7 +636,7 @@ attributes:
   has_part:
     name: has_part
     description: A slot to provide a part of the EvaluatedEntity.
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:hasPart
     alias: has_part
@@ -659,7 +654,7 @@ attributes:
     name: type
     description: This slot is described in more detail within the class in which it
       is used.
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:type
     alias: type
@@ -677,7 +672,7 @@ attributes:
       entity.
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: rdf:type
     alias: rdf_type
@@ -687,7 +682,7 @@ attributes:
     range: DefinedTerm
     recommended: true
     inlined: true
-class_uri: NMR:1002007
+class_uri: MS:1000442
 
 </code></pre>
 </details>

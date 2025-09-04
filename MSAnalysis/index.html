@@ -237,7 +237,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-msanalysis">Class: MSAnalysis</h1>
 <p><em>A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum.</em></p>
-<p>URI: <a href="http://purl.obolibrary.org/obo/CHMO_0000470">CHMO:0000470</a></p>
+<p>URI: <a href="https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis">https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis</a></p>
 <div class="mermaid"> classDiagram
     class MSAnalysis
     click MSAnalysis href "../MSAnalysis/"
@@ -560,7 +560,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://nfdi4chem.github.io/dcat-ms-ap/</li>
+<li>from schema: https://w3id.org/NFDI4Chem/dcat-ms-ap</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -573,11 +573,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>CHMO:0000470</td>
+<td>https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://nfdi4chem.github.io/dcat-ms-ap/MSAnalysis</td>
+<td>https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis</td>
 </tr>
 </tbody>
 </table>
@@ -591,13 +591,12 @@ description: A DataAnalysis which identifies and/or quantifies molecules in a ma
 comments:
 - Initial implementation of a domain-specific schema profile of a mass spectrometry
   analysis.
-from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
 is_a: DataAnalysis
 slot_usage:
   evaluated_entity:
     name: evaluated_entity
     range: MSSpectrum
-class_uri: CHMO:0000470
 
 </code></pre>
 </details>
@@ -609,7 +608,7 @@ description: A DataAnalysis which identifies and/or quantifies molecules in a ma
 comments:
 - Initial implementation of a domain-specific schema profile of a mass spectrometry
   analysis.
-from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
 is_a: DataAnalysis
 slot_usage:
   evaluated_entity:
@@ -621,7 +620,7 @@ attributes:
     description: A slot to provide the data that was analysed by the DataAnalysis.
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     is_a: had_input_entity
     slot_uri: prov:used
@@ -640,7 +639,7 @@ attributes:
       produced information.
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     is_a: had_input_activity
     slot_uri: prov:wasInformedBy
@@ -659,7 +658,7 @@ attributes:
       that was realized by an Activity.
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: prov:used
     alias: realized_plan
@@ -672,7 +671,7 @@ attributes:
     description: The slot to specify the Surrounding in which an Activity took place.
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: prov:atLocation
     alias: occurred_in
@@ -685,7 +684,7 @@ attributes:
     description: A slot to provide an URI for an entity within this schema.
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     identifier: true
     alias: id
@@ -703,7 +702,7 @@ attributes:
     description: The slot to provide a title for the Activity.
     notes:
     - not in DCAT-AP
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:title
     alias: title
@@ -732,7 +731,7 @@ attributes:
     description: The slot to provide a description for the Activity.
     notes:
     - not in DCAT-AP
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:description
     alias: description
@@ -759,7 +758,7 @@ attributes:
     description: The slot to provide a secondary identifier of the Activity.
     notes:
     - not in DCAT-AP
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: adms:identifier
     alias: other_identifier
@@ -777,7 +776,7 @@ attributes:
     description: The slot to provide an Activity that is part of the Activity.
     notes:
     - not in DCAT-AP
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:hasPart
     alias: has_part
@@ -798,7 +797,7 @@ attributes:
     - not in DCAT-AP
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: prov:used
     alias: had_input_entity
@@ -818,7 +817,7 @@ attributes:
     - not in DCAT-AP
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: prov:generated
     alias: had_output_entity
@@ -838,7 +837,7 @@ attributes:
     - not in DCAT-AP
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: prov:wasInformedBy
     alias: had_input_activity
@@ -859,7 +858,7 @@ attributes:
     - not in DCAT-AP
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: prov:wasAssociatedWith
     alias: carried_out_by
@@ -879,7 +878,7 @@ attributes:
     - not in DCAT-AP
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:relation
     alias: has_qualitative_attribute
@@ -902,7 +901,7 @@ attributes:
     - not in DCAT-AP
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:relation
     alias: has_quantitative_attribute
@@ -921,7 +920,7 @@ attributes:
     name: type
     description: This slot is described in more detail within the class in which it
       is used.
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: dcterms:type
     alias: type
@@ -939,7 +938,7 @@ attributes:
       entity.
     in_subset:
     - domain_agnostic_core
-    from_schema: https://nfdi4chem.github.io/dcat-ms-ap/
+    from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: rdf:type
     alias: rdf_type
@@ -949,7 +948,6 @@ attributes:
     range: DefinedTerm
     recommended: true
     inlined: true
-class_uri: CHMO:0000470
 
 </code></pre>
 </details>
