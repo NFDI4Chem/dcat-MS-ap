@@ -234,8 +234,8 @@
 <div class="mermaid"> classDiagram
     class MSSpectrum
     click MSSpectrum href "../MSSpectrum/"
-      AnalysisSourceData &lt;|-- MSSpectrum
-        click AnalysisSourceData href "../AnalysisSourceData/"
+      EvaluatedEntity &lt;|-- MSSpectrum
+        click EvaluatedEntity href "../EvaluatedEntity/"
 
       MSSpectrum : description
 
@@ -326,10 +326,7 @@
 <ul>
 <li><a href="../Entity/">Entity</a> [ <a href="../ClassifierMixin/">ClassifierMixin</a>]<ul>
 <li><a href="../EvaluatedEntity/">EvaluatedEntity</a><ul>
-<li><a href="../AnalysisSourceData/">AnalysisSourceData</a><ul>
 <li><strong>MSSpectrum</strong></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -349,7 +346,7 @@
 <tr>
 <td><a href="../was_generated_by/">was_generated_by</a></td>
 <td>* <br/> <a href="../MSSpectroscopy/">MSSpectroscopy</a></td>
-<td>A slot to provide the Activity which created the AnalysisSourceData</td>
+<td>A slot to provide the Activity which created the EvaluatedEntity</td>
 <td><a href="../EvaluatedEntity/">EvaluatedEntity</a></td>
 </tr>
 <tr>
@@ -420,8 +417,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../MSAnalysis/">MSAnalysis</a></td>
-<td><a href="../evaluated_entity/">evaluated_entity</a></td>
+<td><a href="../MSAnalysisDataset/">MSAnalysisDataset</a></td>
+<td><a href="../is_about_entity/">is_about_entity</a></td>
 <td>range</td>
 <td><a href="./">MSSpectrum</a></td>
 </tr>
@@ -458,18 +455,17 @@
 <pre><code class="language-yaml">name: MSSpectrum
 description: A set of chemical shifts obtained via NMR spectroscopy.
 from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
-is_a: AnalysisSourceData
+is_a: EvaluatedEntity
 slot_usage:
   was_generated_by:
     name: was_generated_by
     range: MSSpectroscopy
     multivalued: true
     inlined_as_list: true
-  scan_polarity:
-    name: scan_polarity
+  has_scan_polarity:
+    name: has_scan_polarity
     description: The scan polarity of the spectrum.
-    slot_uri: MS:1000465
-    range: ScanPolarityEnum
+    range: ScanPolarity
     required: true
 class_uri: MS:1000442
 
@@ -480,23 +476,22 @@ class_uri: MS:1000442
 <pre><code class="language-yaml">name: MSSpectrum
 description: A set of chemical shifts obtained via NMR spectroscopy.
 from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
-is_a: AnalysisSourceData
+is_a: EvaluatedEntity
 slot_usage:
   was_generated_by:
     name: was_generated_by
     range: MSSpectroscopy
     multivalued: true
     inlined_as_list: true
-  scan_polarity:
-    name: scan_polarity
+  has_scan_polarity:
+    name: has_scan_polarity
     description: The scan polarity of the spectrum.
-    slot_uri: MS:1000465
-    range: ScanPolarityEnum
+    range: ScanPolarity
     required: true
 attributes:
   was_generated_by:
     name: was_generated_by
-    description: A slot to provide the Activity which created the AnalysisSourceData.
+    description: A slot to provide the Activity which created the EvaluatedEntity.
     from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
     rank: 1000
     slot_uri: prov:wasGeneratedBy

@@ -229,13 +229,13 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-msanalysisdataset">Class: MSAnalysisDataset</h1>
-<p><em>A dataset that is the result of a MSAnalysis of a ChemicalSample.</em></p>
+<p><em>A dataset about one or multiple MSSpectrum of a ChemicalSample.</em></p>
 <p>URI: <a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></p>
 <div class="mermaid"> classDiagram
     class MSAnalysisDataset
     click MSAnalysisDataset href "../MSAnalysisDataset/"
-      AnalysisDataset &lt;|-- MSAnalysisDataset
-        click AnalysisDataset href "../AnalysisDataset/"
+      Dataset &lt;|-- MSAnalysisDataset
+        click Dataset href "../Dataset/"
 
       MSAnalysisDataset : access_rights
 
@@ -381,8 +381,8 @@
 
 
 
-        MSAnalysisDataset --&gt; "* _recommended_" ChemicalSample : is_about_entity
-        click ChemicalSample href "../ChemicalSample/"
+        MSAnalysisDataset --&gt; "* _recommended_" MSSpectrum : is_about_entity
+        click MSSpectrum href "../MSSpectrum/"
 
 
 
@@ -562,8 +562,8 @@
 
 
 
-        MSAnalysisDataset --&gt; "1..*" MSAnalysis : was_generated_by
-        click MSAnalysis href "../MSAnalysis/"
+        MSAnalysisDataset --&gt; "1..*" DataGeneratingActivity : was_generated_by
+        click DataGeneratingActivity href "../DataGeneratingActivity/"
 
 
 
@@ -572,10 +572,7 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Dataset/">Dataset</a><ul>
-<li><a href="../AnalysisDataset/">AnalysisDataset</a><ul>
 <li><strong>MSAnalysisDataset</strong></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -802,7 +799,7 @@
 </tr>
 <tr>
 <td><a href="../was_generated_by/">was_generated_by</a></td>
-<td>1..* <br/> <a href="../MSAnalysis/">MSAnalysis</a></td>
+<td>1..* <br/> <a href="../DataGeneratingActivity/">DataGeneratingActivity</a></td>
 <td>An activity that generated, or provides the business context for, the creatio...</td>
 <td><a href="../Dataset/">Dataset</a></td>
 </tr>
@@ -814,7 +811,7 @@
 </tr>
 <tr>
 <td><a href="../is_about_entity/">is_about_entity</a></td>
-<td>* <em>recommended</em> <br/> <a href="../ChemicalSample/">ChemicalSample</a></td>
+<td>* <em>recommended</em> <br/> <a href="../MSSpectrum/">MSSpectrum</a></td>
 <td>A slot to provide the EvaluatedEntity a Dataset is about</td>
 <td><a href="../Dataset/">Dataset</a></td>
 </tr>
@@ -859,21 +856,16 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: MSAnalysisDataset
-description: A dataset that is the result of a MSAnalysis of a ChemicalSample.
+description: A dataset about one or multiple MSSpectrum of a ChemicalSample.
 comments:
 - Initial implementation of a domain-specific schema profile for a mass spectrometry
   dataset.
 from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
-is_a: AnalysisDataset
+is_a: Dataset
 slot_usage:
-  was_generated_by:
-    name: was_generated_by
-    range: MSAnalysis
-    multivalued: true
-    inlined_as_list: true
   is_about_entity:
     name: is_about_entity
-    range: ChemicalSample
+    range: MSSpectrum
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -881,21 +873,16 @@ class_uri: dcat:Dataset
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: MSAnalysisDataset
-description: A dataset that is the result of a MSAnalysis of a ChemicalSample.
+description: A dataset about one or multiple MSSpectrum of a ChemicalSample.
 comments:
 - Initial implementation of a domain-specific schema profile for a mass spectrometry
   dataset.
 from_schema: https://w3id.org/NFDI4Chem/dcat-ms-ap
-is_a: AnalysisDataset
+is_a: Dataset
 slot_usage:
-  was_generated_by:
-    name: was_generated_by
-    range: MSAnalysis
-    multivalued: true
-    inlined_as_list: true
   is_about_entity:
     name: is_about_entity
-    range: ChemicalSample
+    range: MSSpectrum
 attributes:
   access_rights:
     name: access_rights
@@ -1478,7 +1465,7 @@ attributes:
     domain_of:
     - Dataset
     - EvaluatedEntity
-    range: MSAnalysis
+    range: DataGeneratingActivity
     required: true
     multivalued: true
     inlined_as_list: true
@@ -1513,7 +1500,7 @@ attributes:
     owner: MSAnalysisDataset
     domain_of:
     - Dataset
-    range: ChemicalSample
+    range: MSSpectrum
     recommended: true
     multivalued: true
     inlined_as_list: true
