@@ -378,9 +378,10 @@
   ],
   "enums": [
     {
-      "name": "ScanPolarityEnum",
-      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/ScanPolarityEnum",
+      "name": "ScanPolarity",
+      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/ScanPolarity",
       "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
+      "enum_uri": "MS:1000465",
       "permissible_values": [
         {
           "text": "negative_scan",
@@ -2429,39 +2430,12 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "scan_polarity",
+      "name": "has_scan_polarity",
       "description": "The scan polarity of the spectrum.",
       "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
-      "mappings": [
-        "http://purl.obolibrary.org/obo/MS_1000465"
-      ],
-      "slot_uri": "http://purl.obolibrary.org/obo/MS_1000465",
-      "range": "ScanPolarityEnum",
+      "slot_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/has_scan_polarity",
+      "range": "ScanPolarity",
       "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "MSAnalysisDataset_was_generated_by",
-      "definition_uri": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#was_generated_by",
-      "description": "This slot is described in more detail within the class in which it is used.",
-      "from_schema": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml",
-      "mappings": [
-        "http://www.w3.org/ns/prov#wasGeneratedBy"
-      ],
-      "is_a": "was_generated_by",
-      "domain": "MSAnalysisDataset",
-      "slot_uri": "http://www.w3.org/ns/prov#wasGeneratedBy",
-      "alias": "was_generated_by",
-      "owner": "MSAnalysisDataset",
-      "domain_of": [
-        "MSAnalysisDataset"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "was_generated_by",
-      "range": "MSAnalysis",
-      "multivalued": true,
-      "inlined": true,
-      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
@@ -2488,63 +2462,7 @@
       ],
       "is_usage_slot": true,
       "usage_slot_name": "is_about_entity",
-      "range": "ChemicalSample",
-      "recommended": true,
-      "multivalued": true,
-      "inlined": true,
-      "inlined_as_list": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "MSAnalysis_evaluated_entity",
-      "definition_uri": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_entity",
-      "description": "The slot to specify the Entity about which the DataGeneratingActivity produced information.",
-      "in_subset": [
-        "domain_agnostic_core"
-      ],
-      "from_schema": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml",
-      "mappings": [
-        "http://www.w3.org/ns/prov#used"
-      ],
-      "is_a": "evaluated_entity",
-      "domain": "MSAnalysis",
-      "slot_uri": "http://www.w3.org/ns/prov#used",
-      "alias": "evaluated_entity",
-      "owner": "MSAnalysis",
-      "domain_of": [
-        "MSAnalysis"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "evaluated_entity",
       "range": "MSSpectrum",
-      "recommended": true,
-      "multivalued": true,
-      "inlined": true,
-      "inlined_as_list": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "MSSpectroscopy_evaluated_entity",
-      "definition_uri": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_entity",
-      "description": "The slot to specify the Entity about which the DataGeneratingActivity produced information.",
-      "in_subset": [
-        "domain_agnostic_core"
-      ],
-      "from_schema": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml",
-      "mappings": [
-        "http://www.w3.org/ns/prov#used"
-      ],
-      "is_a": "evaluated_entity",
-      "domain": "MSSpectroscopy",
-      "slot_uri": "http://www.w3.org/ns/prov#used",
-      "alias": "evaluated_entity",
-      "owner": "MSSpectroscopy",
-      "domain_of": [
-        "MSSpectroscopy"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "evaluated_entity",
-      "range": "ChemicalSample",
       "recommended": true,
       "multivalued": true,
       "inlined": true,
@@ -2576,24 +2494,49 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "MSSpectrum_scan_polarity",
+      "name": "MSSpectrum_has_scan_polarity",
       "description": "The scan polarity of the spectrum.",
       "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
-      "mappings": [
-        "http://purl.obolibrary.org/obo/MS_1000465"
-      ],
-      "is_a": "scan_polarity",
+      "is_a": "has_scan_polarity",
       "domain": "MSSpectrum",
-      "slot_uri": "http://purl.obolibrary.org/obo/MS_1000465",
-      "alias": "scan_polarity",
+      "slot_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/has_scan_polarity",
+      "alias": "has_scan_polarity",
       "owner": "MSSpectrum",
       "domain_of": [
         "MSSpectrum"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "scan_polarity",
-      "range": "ScanPolarityEnum",
+      "usage_slot_name": "has_scan_polarity",
+      "range": "ScanPolarity",
       "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "MSSpectroscopy_evaluated_entity",
+      "definition_uri": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml#evaluated_entity",
+      "description": "The slot to specify the Entity about which the DataGeneratingActivity produced information.",
+      "in_subset": [
+        "domain_agnostic_core"
+      ],
+      "from_schema": "https://stroemphi.github.io/dcat-4C-ap/dcat_ap_plus.yaml",
+      "mappings": [
+        "http://www.w3.org/ns/prov#used"
+      ],
+      "is_a": "evaluated_entity",
+      "domain": "MSSpectroscopy",
+      "slot_uri": "http://www.w3.org/ns/prov#used",
+      "alias": "evaluated_entity",
+      "owner": "MSSpectroscopy",
+      "domain_of": [
+        "MSSpectroscopy"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "evaluated_entity",
+      "range": "ChemicalSample",
+      "recommended": true,
+      "multivalued": true,
+      "inlined": true,
+      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
@@ -6725,7 +6668,7 @@
     {
       "name": "MSAnalysisDataset",
       "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysisDataset",
-      "description": "A dataset that is the result of a MSAnalysis of a ChemicalSample.",
+      "description": "A dataset about one or multiple MSSpectrum of a ChemicalSample.",
       "comments": [
         "Initial implementation of a domain-specific schema profile for a mass spectrometry dataset."
       ],
@@ -6733,7 +6676,7 @@
       "mappings": [
         "dcat:Dataset"
       ],
-      "is_a": "AnalysisDataset",
+      "is_a": "Dataset",
       "slots": [
         "Dataset_access_rights",
         "Dataset_applicable_legislation",
@@ -6770,9 +6713,9 @@
         "Dataset_type",
         "Dataset_version",
         "Dataset_version_notes",
+        "Dataset_was_generated_by",
         "id",
         "is_about_activity",
-        "MSAnalysisDataset_was_generated_by",
         "MSAnalysisDataset_is_about_entity"
       ],
       "slot_usage": {},
@@ -6780,35 +6723,29 @@
       "@type": "ClassDefinition"
     },
     {
-      "name": "MSAnalysis",
-      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis",
-      "description": "A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum.",
-      "comments": [
-        "Initial implementation of a domain-specific schema profile of a mass spectrometry analysis."
-      ],
+      "name": "MSSpectrum",
+      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectrum",
+      "description": "A set of chemical shifts obtained via NMR spectroscopy.",
       "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
-      "is_a": "DataAnalysis",
+      "mappings": [
+        "MS:1000442"
+      ],
+      "is_a": "EvaluatedEntity",
       "slots": [
         "id",
-        "Activity_title",
-        "Activity_description",
-        "Activity_other_identifier",
-        "Activity_has_part",
-        "Activity_had_input_entity",
-        "Activity_had_output_entity",
-        "Activity_had_input_activity",
-        "Activity_carried_out_by",
-        "Activity_has_qualitative_attribute",
-        "Activity_has_quantitative_attribute",
+        "has_qualitative_attribute",
+        "has_quantitative_attribute",
         "ClassifierMixin_type",
         "rdf_type",
-        "evaluated_activity",
-        "realized_plan",
-        "occurred_in",
-        "MSAnalysis_evaluated_entity"
+        "EvaluatedEntity_title",
+        "EvaluatedEntity_description",
+        "EvaluatedEntity_has_part",
+        "EvaluatedEntity_other_identifier",
+        "MSSpectrum_was_generated_by",
+        "MSSpectrum_has_scan_polarity"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis",
+      "class_uri": "http://purl.obolibrary.org/obo/MS_1000442",
       "@type": "ClassDefinition"
     },
     {
@@ -6841,32 +6778,6 @@
       ],
       "slot_usage": {},
       "class_uri": "http://purl.obolibrary.org/obo/CHMO_0000470",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "MSSpectrum",
-      "definition_uri": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSSpectrum",
-      "description": "A set of chemical shifts obtained via NMR spectroscopy.",
-      "from_schema": "https://w3id.org/NFDI4Chem/dcat-ms-ap",
-      "mappings": [
-        "MS:1000442"
-      ],
-      "is_a": "AnalysisSourceData",
-      "slots": [
-        "id",
-        "has_qualitative_attribute",
-        "has_quantitative_attribute",
-        "ClassifierMixin_type",
-        "rdf_type",
-        "EvaluatedEntity_title",
-        "EvaluatedEntity_description",
-        "EvaluatedEntity_has_part",
-        "EvaluatedEntity_other_identifier",
-        "MSSpectrum_was_generated_by",
-        "MSSpectrum_scan_polarity"
-      ],
-      "slot_usage": {},
-      "class_uri": "http://purl.obolibrary.org/obo/MS_1000442",
       "@type": "ClassDefinition"
     },
     {
@@ -8436,9 +8347,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "dcat_ms_ap.yaml",
-  "source_file_date": "2025-09-04T11:44:35",
-  "source_file_size": 2222,
-  "generation_date": "2025-09-04T11:46:50",
+  "source_file_date": "2025-09-08T15:47:59",
+  "source_file_size": 1776,
+  "generation_date": "2025-09-08T15:48:11",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/dcat_ms_ap.context.jsonld",

@@ -462,28 +462,7 @@ message Location
   string centroid = 0
   geometry geometry = 0
  }
-// A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum.
-message MSAnalysis
- {
-  uriorcurie id = 0
- repeated  string title = 0
- repeated  string description = 0
- repeated  identifier otherIdentifier = 0
-  activity hasPart = 0
- repeated  entity hadInputEntity = 0
- repeated  entity hadOutputEntity = 0
- repeated  activity hadInputActivity = 0
- repeated  agenticEntity carriedOutBy = 0
- repeated  qualitativeAttribute hasQualitativeAttribute = 0
- repeated  quantitativeAttribute hasQuantitativeAttribute = 0
-  definedTerm type = 0
-  definedTerm rdfType = 0
- repeated  evaluatedActivity evaluatedActivity = 0
-  plan realizedPlan = 0
-  surrounding occurredIn = 0
- repeated  mSSpectrum evaluatedEntity = 0
- }
-// A dataset that is the result of a MSAnalysis of a ChemicalSample.
+// A dataset about one or multiple MSSpectrum of a ChemicalSample.
 message MSAnalysisDataset
  {
   rightsStatement accessRights = 0
@@ -521,10 +500,10 @@ message MSAnalysisDataset
  repeated  concept type = 0
   string version = 0
  repeated  string versionNotes = 0
+ repeated  dataGeneratingActivity wasGeneratedBy = 0
   uriorcurie id = 0
  repeated  evaluatedActivity isAboutActivity = 0
- repeated  mSAnalysis wasGeneratedBy = 0
- repeated  chemicalSample isAboutEntity = 0
+ repeated  mSSpectrum isAboutEntity = 0
  }
 // Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance.
 message MSSpectroscopy
@@ -560,7 +539,7 @@ message MSSpectrum
  repeated  evaluatedEntity hasPart = 0
  repeated  identifier otherIdentifier = 0
  repeated  mSSpectroscopy wasGeneratedBy = 0
-  scanPolarityEnum scanPolarity = 0
+  scanPolarity hasScanPolarity = 0
  }
 // A dataset that is the result of a NMRSpectralAnalysis of a ChemicalSample.
 message NMRAnalysisDataset

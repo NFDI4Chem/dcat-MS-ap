@@ -163,9 +163,6 @@
    "MediaTypeOrExtent": {
       "@id": "dcterms:MediaTypeOrExtent"
    },
-   "MSAnalysis": {
-      "@id": "https://w3id.org/NFDI4Chem/dcat-ms-ap/MSAnalysis"
-   },
    "MSAnalysisDataset": {
       "@id": "dcat:Dataset"
    },

@@ -19,27 +19,28 @@ imports:
 
 classes:
   MSAnalysisDataset:
-    is_a: AnalysisDataset
+    is_a: Dataset
     class_uri: dcat:Dataset
-    description: A dataset that is the result of a MSAnalysis of a ChemicalSample.
+    description: A dataset about one or multiple MSSpectrum of a ChemicalSample.
     slot_usage:
-      was_generated_by:
-        range: MSAnalysis
-        multivalued: true
-        inlined_as_list: true
       is_about_entity:
-        range: ChemicalSample
+        range: MSSpectrum
     comments:
       - Initial implementation of a domain-specific schema profile for a mass spectrometry dataset.
 
-  MSAnalysis:
-    is_a: DataAnalysis
-    description: A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum.
+  MSSpectrum:
+    is_a: EvaluatedEntity
+    class_uri: MS:1000442
+    description: A set of chemical shifts obtained via NMR spectroscopy.
     slot_usage:
-      evaluated_entity:
-        range: MSSpectrum
-    comments:
-      - Initial implementation of a domain-specific schema profile of a mass spectrometry analysis.
+      was_generated_by:
+        range: MSSpectroscopy
+        multivalued: true
+        inlined_as_list: true
+      has_scan_polarity:
+        range: ScanPolarity
+        description: The scan polarity of the spectrum.
+        required: true
 
   MSSpectroscopy:
     is_a: DataGeneratingActivity
@@ -49,23 +50,9 @@ classes:
       evaluated_entity:
         range: ChemicalSample
 
-  MSSpectrum:
-    is_a: AnalysisSourceData
-    class_uri: MS:1000442
-    description: A set of chemical shifts obtained via NMR spectroscopy.
-    slot_usage:
-      was_generated_by:
-        range: MSSpectroscopy
-        multivalued: true
-        inlined_as_list: true
-      scan_polarity:
-        slot_uri: MS:1000465
-        range: ScanPolarityEnum
-        description: The scan polarity of the spectrum.
-        required: true
-
 enums:
-  ScanPolarityEnum:
+  ScanPolarity:
+    enum_uri: MS:1000465
     permissible_values:
       negative_scan:
         text: negative_scan

@@ -3444,185 +3444,9 @@
             "title": "Location",
             "type": "object"
         },
-        "MSAnalysis": {
-            "additionalProperties": false,
-            "description": "A DataAnalysis which identifies and/or quantifies molecules in a mass spectrum.",
-            "properties": {
-                "carried_out_by": {
-                    "description": "The slot to specify the AgenticEntity that played a certain part in carrying out the Activity, either via having a specific role, function or disposition that was realized in the Activity.",
-                    "items": {
-                        "$ref": "#/$defs/AgenticEntity"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "description": {
-                    "description": "The slot to provide a description for the Activity.",
-                    "items": {},
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "evaluated_activity": {
-                    "description": "The slot to specify the Activity about which the DataGeneratingActivity produced information.",
-                    "items": {
-                        "$ref": "#/$defs/EvaluatedActivity"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "evaluated_entity": {
-                    "description": "A slot to provide the data that was analysed by the DataAnalysis.",
-                    "items": {
-                        "$ref": "#/$defs/MSSpectrum"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "had_input_activity": {
-                    "description": "The slot to provide a previous Activity that informed the Activity by being causally via a shared participant.",
-                    "items": {
-                        "$ref": "#/$defs/Activity"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "had_input_entity": {
-                    "description": "The slot to specify the Entity that was used as an input of an Activity that is to be changed, consumed or transformed.",
-                    "items": {
-                        "$ref": "#/$defs/Entity"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "had_output_entity": {
-                    "description": "The slot to specify the Entity that was generated as an output of an Activity.",
-                    "items": {
-                        "$ref": "#/$defs/Entity"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "has_part": {
-                    "anyOf": [
-                        {
-                            "$ref": "#/$defs/Activity"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "The slot to provide an Activity that is part of the Activity."
-                },
-                "has_qualitative_attribute": {
-                    "description": "The slot to relate a qualitative attribute to an EvaluatedEntity, EvaluatedActivity or AgenticEntity",
-                    "items": {
-                        "$ref": "#/$defs/QualitativeAttribute"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "has_quantitative_attribute": {
-                    "description": "The slot to relate a quantitative attribute to an EvaluatedEntity, EvaluatedActivity or AgenticEntity",
-                    "items": {
-                        "$ref": "#/$defs/QuantitativeAttribute"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "id": {
-                    "description": "A slot to provide an URI for an entity within this schema.",
-                    "type": "string"
-                },
-                "occurred_in": {
-                    "anyOf": [
-                        {
-                            "$ref": "#/$defs/Surrounding"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "The slot to specify the Surrounding in which an Activity took place."
-                },
-                "other_identifier": {
-                    "description": "The slot to provide a secondary identifier of the Activity.",
-                    "items": {
-                        "$ref": "#/$defs/Identifier"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "rdf_type": {
-                    "anyOf": [
-                        {
-                            "$ref": "#/$defs/DefinedTerm"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "The slot to specify the ontology class that is instantiated by an entity."
-                },
-                "realized_plan": {
-                    "anyOf": [
-                        {
-                            "$ref": "#/$defs/Plan"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "The slot to specify the Plan (i.e. directive information or procedure) that was realized by an Activity."
-                },
-                "title": {
-                    "description": "The slot to provide a title for the Activity.",
-                    "items": {},
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "type": {
-                    "anyOf": [
-                        {
-                            "$ref": "#/$defs/DefinedTerm"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "This slot is described in more detail within the class in which it is used."
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "MSAnalysis",
-            "type": "object"
-        },
         "MSAnalysisDataset": {
             "additionalProperties": false,
-            "description": "A dataset that is the result of a MSAnalysis of a ChemicalSample.",
+            "description": "A dataset about one or multiple MSSpectrum of a ChemicalSample.",
             "properties": {
                 "access_rights": {
                     "anyOf": [
@@ -3770,7 +3594,7 @@
                 "is_about_entity": {
                     "description": "A slot to provide the EvaluatedEntity a Dataset is about.",
                     "items": {
-                        "$ref": "#/$defs/ChemicalSample"
+                        "$ref": "#/$defs/MSSpectrum"
                     },
                     "type": [
                         "array",
@@ -3986,7 +3810,7 @@
                 "was_generated_by": {
                     "description": "An activity that generated, or provides the business context for, the creation of the dataset.",
                     "items": {
-                        "$ref": "#/$defs/MSAnalysis"
+                        "$ref": "#/$defs/DataGeneratingActivity"
                     },
                     "type": "array"
                 }
@@ -4253,7 +4077,7 @@
                     "description": "This slot is described in more detail within the class in which it is used."
                 },
                 "was_generated_by": {
-                    "description": "A slot to provide the Activity which created the AnalysisSourceData.",
+                    "description": "A slot to provide the Activity which created the EvaluatedEntity.",
                     "items": {
                         "$ref": "#/$defs/MSSpectroscopy"
                     },
@@ -5400,13 +5224,13 @@
             "title": "SMILES",
             "type": "object"
         },
-        "ScanPolarityEnum": {
+        "ScanPolarity": {
             "description": "",
             "enum": [
                 "negative_scan",
                 "positive_scan"
             ],
-            "title": "ScanPolarityEnum",
+            "title": "ScanPolarity",
             "type": "string"
         },
         "Software": {

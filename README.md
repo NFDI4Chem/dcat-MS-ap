@@ -25,7 +25,7 @@ uv venv
 source .venv/bin/activate
 uv pip install rust-just
 uv pip install poetry
-
+uv pip install linkml
 ```
 
 

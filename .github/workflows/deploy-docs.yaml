@@ -1,8 +1,11 @@
 ---
 name: Auto-deployment of dcat_ms_ap Documentation
+
 on:
   push:
     branches: [main]
+  release:
+    types: [ created ]
 
 jobs:
   build-docs:

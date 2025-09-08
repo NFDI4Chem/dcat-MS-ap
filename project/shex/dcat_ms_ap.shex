@@ -124,7 +124,7 @@ dcatap_plus:AnalysisDataset  (
           ) ;
           rdf:type [ dcat:Dataset ]
        )
-    } OR @<MSAnalysisDataset> OR @nfdi4c:NMRAnalysisDataset
+    } OR @nfdi4c:NMRAnalysisDataset
 )
 
 dcatap_plus:AnalysisSourceData  (
@@ -135,7 +135,7 @@ dcatap_plus:AnalysisSourceData  (
           ) ;
           rdf:type [ prov:Entity ]
        )
-    } OR @<MSSpectrum> OR @nfdi4c:NMRSpectrum
+    } OR @nfdi4c:NMRSpectrum
 )
 
 dcatap_plus:Any CLOSED {
@@ -279,7 +279,7 @@ dcatap_plus:DataAnalysis  (
           ) ;
           rdf:type [ prov:Activity ]
        )
-    } OR @<MSAnalysis> OR @nfdi4c:NMRSpectralAnalysis
+    } OR @nfdi4c:NMRSpectralAnalysis
 )
 
 dcatap_plus:DataGeneratingActivity  (
@@ -361,7 +361,7 @@ dcatap_plus:Dataset  (
           ) ;
           rdf:type [ dcat:Dataset ]
        )
-    } OR @dcatap_plus:AnalysisDataset
+    } OR @dcatap_plus:AnalysisDataset OR @<MSAnalysisDataset>
 )
 
 dcatap_plus:DatasetSeries CLOSED {
@@ -480,7 +480,7 @@ dcatap_plus:EvaluatedEntity  (
           ) ;
           rdf:type [ prov:Entity ]
        )
-    } OR @dcatap_plus:AnalysisSourceData OR @nfdi4c:ChemicalSubstance
+    } OR @dcatap_plus:AnalysisSourceData OR @nfdi4c:ChemicalSubstance OR @<MSSpectrum>
 )
 
 dcatap_plus:Frequency CLOSED {
@@ -596,20 +596,10 @@ dcatap_plus:MediaTypeOrExtent CLOSED {
     )
 }
 
-<MSAnalysis> CLOSED {
-    (  $<MSAnalysis_tes> (  &dcatap_plus:DataAnalysis_tes ;
-          rdf:type [ prov:Activity ] ? ;
-          prov:used @<MSSpectrum> *
-       ) ;
-       rdf:type [ <MSAnalysis> ]
-    )
-}
-
 <MSAnalysisDataset> CLOSED {
-    (  $<MSAnalysisDataset_tes> (  &dcatap_plus:AnalysisDataset_tes ;
+    (  $<MSAnalysisDataset_tes> (  &dcatap_plus:Dataset_tes ;
           rdf:type [ dcat:Dataset ] ? ;
-          prov:wasGeneratedBy @<MSAnalysis> * ;
-          dcterms:subject @nfdi4c:ChemicalSample *
+          dcterms:subject @<MSSpectrum> *
        ) ;
        rdf:type [ dcat:Dataset ]
     )
@@ -625,11 +615,10 @@ dcatap_plus:MediaTypeOrExtent CLOSED {
 }
 
 <MSSpectrum> CLOSED {
-    (  $<MSSpectrum_tes> (  &dcatap_plus:AnalysisSourceData_tes ;
+    (  $<MSSpectrum_tes> (  &dcatap_plus:EvaluatedEntity_tes ;
           rdf:type [ prov:Entity ] ? ;
           prov:wasGeneratedBy @<MSSpectroscopy> * ;
-          <http://purl.obolibrary.org/obo/MS_1000465> [ <http://purl.obolibrary.org/obo/MS_1000129>
-             <http://purl.obolibrary.org/obo/MS_1000130> ]
+          <has_scan_polarity> [ <http://purl.obolibrary.org/obo/MS_1000129> <http://purl.obolibrary.org/obo/MS_1000130> ]
        ) ;
        rdf:type [ <http://purl.obolibrary.org/obo/MS_1000442> ]
     )

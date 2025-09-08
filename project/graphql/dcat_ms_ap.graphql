@@ -22,7 +22,7 @@ enum NMRAssayEnum
     CHMO__COLON__0000595
   }
 
-enum ScanPolarityEnum
+enum ScanPolarity
   {
     negative_scan
     positive_scan
@@ -556,27 +556,6 @@ type MediaTypeOrExtent
   {
   }
 
-type MSAnalysis
-  {
-    id: Uriorcurie!
-    title: [String]
-    description: [String]
-    otherIdentifier: [Identifier]
-    hasPart: Activity
-    hadInputEntity: [Entity]
-    hadOutputEntity: [Entity]
-    hadInputActivity: [Activity]
-    carriedOutBy: [AgenticEntity]
-    hasQualitativeAttribute: [QualitativeAttribute]
-    hasQuantitativeAttribute: [QuantitativeAttribute]
-    type: DefinedTerm
-    rdfType: DefinedTerm
-    evaluatedActivity: [EvaluatedActivity]
-    realizedPlan: Plan
-    occurredIn: Surrounding
-    evaluatedEntity: [MSSpectrum]
-  }
-
 type MSAnalysisDataset
   {
     accessRights: RightsStatement
@@ -614,10 +593,10 @@ type MSAnalysisDataset
     type: [Concept]
     version: String
     versionNotes: [String]
+    wasGeneratedBy: [DataGeneratingActivity]!
     id: Uriorcurie!
     isAboutActivity: [EvaluatedActivity]
-    wasGeneratedBy: [MSAnalysis]
-    isAboutEntity: [ChemicalSample]
+    isAboutEntity: [MSSpectrum]
   }
 
 type MSSpectroscopy
@@ -653,7 +632,7 @@ type MSSpectrum
     hasPart: [EvaluatedEntity]
     otherIdentifier: [Identifier]
     wasGeneratedBy: [MSSpectroscopy]
-    scanPolarity: ScanPolarityEnum!
+    hasScanPolarity: ScanPolarity!
   }
 
 type NMRAnalysisDataset
